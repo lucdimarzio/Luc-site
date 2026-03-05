@@ -154,3 +154,12 @@ h1{
   .card{ grid-column: span 12; }
   .menu{ gap:6px; }
 }
+.embed {
+  margin-top: 12px;
+}
+
+.embed iframe {
+  width: 100%;
+  border: 0;
+  border-radius: 12px;
+}
