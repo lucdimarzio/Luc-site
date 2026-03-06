@@ -74,18 +74,26 @@ header{
   background:rgba(255,255,255,.06);
 }
 
-.cta:hover{
-  transform:translateY(-1px);
-  box-shadow:0 6px 20px rgba(0,0,0,.35);
+/* Top-right Support button */
+
+.cta{
   display:inline-flex;
   align-items:center;
   justify-content:center;
   padding:10px 16px;
   border-radius:14px;
-  background:var(--accent);
-  color:#071015;
-  font-weight:600;
+  background:#f5f2e8; /* soft cream */
+  color:#111;
+  font-weight:500;
+  letter-spacing:.2px;
   border:1px solid rgba(255,255,255,.08);
+  transition:all .18s ease;
+}
+
+.cta:hover{
+  background:#ffffff;
+  transform:translateY(-1px);
+  box-shadow:0 6px 20px rgba(0,0,0,.35);
 }
 
 .hero{
