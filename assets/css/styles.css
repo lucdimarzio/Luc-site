@@ -76,24 +76,29 @@ header{
 
 /* Top-right Support button */
 
+/* Top-right Support button */
+
 .cta{
   display:inline-flex;
   align-items:center;
   justify-content:center;
   padding:10px 16px;
   border-radius:14px;
-  background:#f5f2e8; /* soft cream */
+  background:#f5f2e8;
   color:#111;
   font-weight:500;
   letter-spacing:.2px;
   border:1px solid rgba(255,255,255,.08);
-  transition:all .18s ease;
+  transition:background-color .18s ease, color .18s ease, border-color .18s ease;
 }
 
 .cta:hover{
-  background:#ffffff;
-  transform:translateY(-1px);
-  box-shadow:0 6px 20px rgba(0,0,0,.35);
+  background:#fffdf8;
+  color:#111;
+  border-color:rgba(255,255,255,.18);
+  box-shadow:none;
+  transform:none;
+  opacity:1;
 }
 
 .hero{
