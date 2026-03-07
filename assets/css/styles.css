@@ -191,7 +191,8 @@ h1{
 }
 .store-image{
   width:100%;
-  aspect-ratio:3 / 4;
+  height:auto;
+  max-height:320px;
   object-fit:cover;
   object-position:center;
   border-radius:14px;
