@@ -189,21 +189,6 @@ h1{
   object-fit:cover;
   object-position:center;
 }
-.store-image{
-  width:150px;
-  max-width:100%;
-  height:auto;
-  display:block;
-  margin:0 auto 14px auto;
-  border-radius:10px;
-  border:1px solid rgba(255,255,255,.08);
-}
-
-.store-wide{
-  width:220px;
-  max-width:100%;
-  height:auto;
-}
 .store-card{
   text-align:center;
 }
@@ -211,5 +196,28 @@ h1{
 .store-image-wrap{
   display:flex;
   justify-content:center;
+  align-items:center;
   margin-bottom:16px;
+  min-height:220px;
+}
+
+.store-image{
+  width:120px;
+  max-width:100%;
+  height:auto;
+  max-height:200px;
+  display:block;
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,.08);
+  object-fit:contain;
+  object-position:center;
+}
+
+.store-wide{
+  width:220px;
+  max-width:100%;
+  height:auto;
+  max-height:160px;
+  object-fit:contain;
+  object-position:center;
 }
