@@ -178,3 +178,12 @@ h1{
   border: 0;
   border-radius: 12px;
 }
+.video-thumb{
+  width:100%;
+  aspect-ratio:16 / 9;
+  display:block;
+  border-radius:14px;
+  margin-bottom:14px;
+  border:1px solid rgba(255,255,255,.08);
+  object-fit:cover;
+}
