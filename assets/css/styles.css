@@ -190,26 +190,20 @@ h1{
   object-position:center;
 }
 .store-image{
-  width:160px;
+  width:150px;
+  max-width:100%;
   height:auto;
   display:block;
-  margin-bottom:14px;
+  margin:0 auto 14px auto;
   border-radius:10px;
   border:1px solid rgba(255,255,255,.08);
 }
-.card img{
-  margin-left:auto;
-  margin-right:auto;
-}
-.card{
-  text-align:center;
-}
+
 .store-wide{
   width:220px;
+  max-width:100%;
   height:auto;
 }
-/* STORE LAYOUT */
-
 .store-card{
   text-align:center;
 }
@@ -218,11 +212,4 @@ h1{
   display:flex;
   justify-content:center;
   margin-bottom:16px;
-}
-
-.store-image{
-  width:150px;
-  height:auto;
-  border-radius:10px;
-  border:1px solid rgba(255,255,255,.08);
 }
