@@ -292,7 +292,7 @@ h1{
 
 .store-wide{
   width:220px;
-  max-width:100%;
+  max-width:125%;
   height:auto;
   max-height:200px;
   object-fit:contain;
