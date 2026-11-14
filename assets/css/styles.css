@@ -519,3 +519,45 @@ h1{
   .hero{ padding:40px 0 24px; }
 }
 .embed iframe{ max-width:100%; }
+
+/* About */
+.about-hero h1{ max-width:16ch; }
+.about-grid{ display:grid; grid-template-columns:minmax(0,1.6fr) minmax(0,1fr); gap:40px; align-items:start; }
+.about-story a{ color:var(--text); text-decoration:underline; text-underline-offset:3px; text-decoration-color:var(--accent); }
+.about-side{ display:flex; flex-direction:column; gap:16px; position:sticky; top:90px; }
+.about-side .card{ grid-column:auto; }
+.about-side h3{ font-size:15px; margin:0 0 10px; }
+.stats-card{ display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+.stats-card strong{ display:block; font-size:30px; line-height:1; }
+.stats-card span{ color:var(--muted); font-size:13px; }
+.facts{ margin:0; padding-left:18px; color:var(--muted); font-size:14px; }
+.facts li{ margin:0 0 6px; }
+.facts a{ color:var(--text); text-decoration:underline; text-underline-offset:3px; }
+.instagram-card{ grid-column:auto; padding:24px; }
+.ig-head{ display:flex; align-items:center; gap:16px; flex-wrap:wrap; }
+.ig-head > div{ flex:1 1 220px; }
+.ig-head h2{ margin:0; font-size:22px; }
+.ig-head p{ margin:2px 0 0; }
+.ig-icon{ width:44px; height:44px; color:var(--accent); flex:none; }
+.ig-posts{ display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:16px; margin-top:20px; }
+.ig-posts .instagram-media{ min-width:0 !important; width:100% !important; margin:0 !important; }
+.about-links .links{ justify-content:flex-start; }
+@media (max-width: 820px){
+  .about-grid{ grid-template-columns:1fr; gap:24px; }
+  .about-side{ position:static; }
+  .ig-posts{ grid-template-columns:1fr; }
+}
+.about-hero{ display:grid; grid-template-columns:minmax(0,1.2fr) minmax(0,1fr); gap:40px; align-items:center; }
+.about-photo{
+  width:100%;
+  height:auto;
+  aspect-ratio:4 / 5;
+  object-fit:cover;
+  object-position:48% 30%;
+  border-radius:18px;
+  border:1px solid rgba(255,255,255,.08);
+}
+@media (max-width: 820px){
+  .about-hero{ grid-template-columns:1fr; gap:24px; }
+  .about-photo{ aspect-ratio:4 / 3; object-position:48% 25%; }
+}
