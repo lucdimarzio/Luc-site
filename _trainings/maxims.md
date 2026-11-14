@@ -3,7 +3,7 @@ title: "The Maxims"
 subtitle: "Shedding the myths of what it means to be a creative leader."
 order: 1
 slides: maxims
-slide_count: 8
+slide_count: 7
 summary: "The seven statements I want everyone on my worship team to carry. They're the lens for everything else we do."
 ---
 
