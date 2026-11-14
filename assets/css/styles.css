@@ -491,3 +491,31 @@ h1{
 @media (max-width: 820px){
   .interview-card{ grid-column:span 12; }
 }
+
+/* PHONE HEADER: name + Support on one row, menu as a single swipeable row below */
+@media (max-width: 720px){
+  .nav{
+    flex-wrap:wrap;
+    row-gap:6px;
+    padding:10px 0 8px;
+  }
+  .brand{ order:1; white-space:nowrap; }
+  .cta{ order:2; padding:8px 14px; font-size:14px; border-radius:12px; }
+  .menu{
+    order:3;
+    width:100%;
+    flex-wrap:nowrap;
+    justify-content:flex-start;
+    gap:2px;
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+    margin:0 -10px;
+    padding:0 10px;
+    width:calc(100% + 20px);
+  }
+  .menu::-webkit-scrollbar{ display:none; }
+  .menu a{ flex:0 0 auto; white-space:nowrap; }
+  .hero{ padding:40px 0 24px; }
+}
+.embed iframe{ max-width:100%; }
