@@ -1,6 +1,6 @@
 ---
 title: "Let's Talk About Our Feelings"
-artist: "Mogli the Iceberg"
+artist: "Mogli the Iceburg"
 format: Album
 date: 2018-06-01
 date_approximate: true
