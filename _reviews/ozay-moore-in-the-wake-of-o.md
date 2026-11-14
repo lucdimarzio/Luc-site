@@ -1,0 +1,47 @@
+---
+title: "In the Wake of O"
+artist: "Ozay Moore"
+format: Album
+date: 2018-06-01
+date_approximate: true
+rating: above
+rating_label: "Above the Bar"
+summary: "I was introduced to Ozay Moore in college when he was part of “Lightheaded.” Fast forward about 20 years and he’s still holding it down. I was happy when I heard of his upcoming release this week. Today…"
+source_file: "Bar Exams (compilation)"
+---
+
+I was introduced to Ozay Moore in college when he was part of “Lightheaded.” Fast forward about 20 years and he’s still holding it down. I was happy when I heard of his upcoming release this week. Today I’m listening to Ozay Moore’s “In The Wake Of O.” Let’s check it out.
+
+At first look, everything is appealing to the eye. The cover art is on point, vibrant colors and a profile of Ozayhimself surrounded by alternate portrayals. The list of features doesn’t disappoint. Lightheaded has reunited on a track, Sareem Poems, Propaganda, and James Gardin among others. I’m in a hopeful mood even before I dive in. DIVING IN The first track is called “Thumb Drive” and it begins with some wind blowing and rhodes begin to chime in as well as some horns. This song starts low key and builds in intensity as the beat progresses. Above the bar rhymes all the way leading into some p-funk vocals in the outro. Terrific opener. “Othello isn’t Ozay but we share the things that have made us…neither one of us has ever desired to be famous”
+
+The second track, “Good” brings in some boom bap with a vocal sample. Ozay spits nothing but BARS. There’s lyrical density here that’s been unmatched in 2018, and the music is so clean and spacious I’m given room to digest. Round all of this out with the hook implementing some strong gang vocals and we are golden. “All in all I’m good I don’t want it that bad/Come what may I’m right here/You do it your way I’mma do it mine”
+
+At the beginning of this third track I’m starting to settle in. While it’s predictable, the music is all laid out on top of some solid drum kits. If this isn’t done well, a listener could get tired. I’m finding out so far that the artists producing each track are intentional about making everything sound congruent, and it’s after that when they change up layers and textures to make the song their own. Fluidity is on point so far, and if you’ve been reading my reviews this is a value of mine. The hook on this song is perfect.
+
+Everything is working together and the features fit nice and snug into this landscape that’s been created. I really dig the scratching at the end as well. We’re flying above the bar at the moment.
+
+“I’m beat boxin the beat/ I’m pete rockin it like Jay gave the youngins the rock they keep droppin it”
+
+Track 4 is a skit, a chance for us to get a mental break due to the challenging lyrics and sonic bombs. (I can’t really critique skits and I don’t think they should count against an overall feel of an album as long as the artist doesn’t feature too many of them.) “WSTCST” comes out of nowhere and I’m geeked. It’s that 90’s west coast G-Funk vibe and it’s so on point.
+
+“It’s where you wanna go/It’s where you dream to be/And if you ever make it/You’ll never want to leave”
+
+7-11’S AND MULLETS I truly feel like this album needed that skit in order to give us a sonic left turn from where the rest of the album was headed. I’m impressed by the creative decisions, and while this song doesn’t really fit with anything so far, my ears were willing to accept it because of that skit break. It’s also rare in the current state of music to find albums with numerous songs that are four and a half minutes long or longer. It’s bold but it shows that Ozay trusts his content and he trust the producers to continue to intrigue the listener throughout. As I say that, I’m witnessing a song that may have gone on too long. There is so much business up front – intricate flows full of bars and incredible music that leads to euphoria. I just feel like we’ve got too much of a party in the back. This outro is a 7-11 (7 words 11 times) and gets played out for me. While it all sounds and feels great I think we’re hanging out here for too long. If it’s getting shaggy in the back, I say just go ahead and cut it before you’ve grown a mullet.
+
+Track 6 is the Lightheaded reunion, “Crowd React” that we’ve all been waiting for. (Okay maybe just me?) At the tope we’re hit with heavy synths and shakers and a highly percussive beat. The first thing we’re introduced to is the hook, and then we’re into the verses. I dig the construction of the song here. Instead of just one verse at the
+
+top, we get back to back verses before the next hook. All the features are on point. I found Braille to be a little raw but he came with it and it worked well with the overall feel. “Say we’re fresh or say we wack/We just wanna see the crowd react” LYRICAL DENSITY Abracadabra is the next tune featuring Cataphant and Ohmega Watts. Cataphant’s vocals are buttery on this hook, but this might be the first time the music gets in the way. The digital sounds throughout are intricate and thoughtfully placed, I just needed some room on Cataphant’s vocals there. Ohmega Watts delivers a full package of explosives on his verse. I’m usually typing out concepts and themes by now, but each thought is so thick I don’t have time. No doubt everything is causing me to want to hit repeat because I find myself asking “wait..what did he say?”
+
+“Wow…” Yeah that’s all you can say after you’ve heard this beat! It’s nasty, with distorted horns and a bass line that digs into the track. This is a socially conscious track that keeps everything in perspective. I’m not sure how much more I can write about this song. It requires you to only listen. I will say that I enjoy that there appears to be a melodic aspect to the vocals at some point in every song. It shows that it’s possible to show your versatility while being yourself. Versatility is a novelty to hear someone bring it well.
+
+LET YOUR BRAIN BREATHE Great another spot to take a break. Ozay is self aware (or is surrounded by people who are) enough to know that the consistent heaviness in the songs can lead to exhaustion. I appreciate this moment to take a breath before I encounter what else is in Ozay’s bag of tricks.
+
+LTD starts off with a simple drum beat and an intricate bass line once again. The synth beds here are spectacular though. The fluidity of this album is terrific. I love how that interlude went straight into the intro here, and they didn’t just scrap that feel and bring in a full groove on the downbeat of the song. They let it breathe, and they connect the dots of transition perfectly rather than jolting you awake. “LTD” stands for “Living The Dream” and is sort of a “seize the moment” concept here. Sareem kills his verse,
+
+saying that he appreciates life for what it is, and Ozay asks that God bless the name of everything he leaves on earth. Solid track all around.
+
+The final track on this album is called “Transparent See.” The beat is insane, with layers switching up as the song goes in order to enhance what’s happening in the flow. Thematically Ozay is talking about proof and truth. The R&B hook here doesn’t work for me, other than to serve it’s purpose to give the listener a break from the heat- packed verses. The vocal performance on the hook is just fine, and it brings home the topic of the tune, it’s honestly just way out of the box for me. There’s double time raps throughout, and the second verse is flames. When the outro began I finally feel that I understood how I was legitimately experiencing the actual “Wake of O.” The wake came and went too fast.
+
+### Who Wouldn’t Want Invited To The Party?
+
+What can I say? “The Wake Of O” to me felt like that party you get invited to when you’re a freshman. You get to the party and it’s all the cool kids, all the upper class men, and then you find out they’re actually good people and they like you. In this moment you’re caught up too much in the emotions you get from feeling valued that you forget to take notes on what it’s like to be cool. You don’t get caught up in it you just sit back and watch. You realize that it’s a privilege to be here and witness all of the dopeness, and you’d just rather be there in the moment and love your life. Alright, we all know these parties don’t really exist, but rarely do albums like this one. I found this project to be incredibly enjoyable. It’s really early in 2018 still, but I’d expect “In The Wake Of O” to be in the running for album of the year. It’s just straight up hip- hop that anyone can appreciate with not a weak beat or feature to be found. For me there were small slumps that altogether spanned about a minute between two places… but besides that I’m pleased to say this album is Above The Bar. Get your ears on this now.

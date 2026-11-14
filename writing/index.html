@@ -1,0 +1,72 @@
+---
+layout: default
+title: Writing
+nav: writing
+description: Album reviews, interviews and lists from Luc DiMarzio — including the Bar Exam, years of first-listen reviews of Christian hip-hop.
+---
+{% assign reviews = site.reviews | sort: "date" | reverse %}
+{% assign oldest = site.reviews | sort: "date" | first %}
+{% assign above_count = 0 %}
+{% for r in site.reviews %}{% if r.rating == "above" %}{% assign above_count = above_count | plus: 1 %}{% endif %}{% endfor %}
+
+<main class="container">
+  <section class="hero">
+    <div class="kicker">Lead</div>
+    <h1>Writing</h1>
+    <p class="subhead">Album reviews, interviews and lists about hip-hop, faith and the people making the music. My work has appeared on Rapzilla, NewH2O and Midnight Donuts.</p>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">Featured</h2>
+    <div class="grid">
+    {% for r in reviews %}{% if r.featured %}
+    <article class="card feature-card">
+      <div class="kicker">{% if r.published_in %}{{ r.published_in }} &middot; {% endif %}{{ r.date | date: "%B %Y" }}</div>
+      <h3>Bar Exam: {{ r.title }}</h3>
+      <p class="review-artist">{{ r.artist }} <span>&middot; {{ r.format }}</span></p>
+      <span class="rating rating-{{ r.rating }}">{{ r.rating_label }}</span>
+      <p>{{ r.summary }}</p>
+      <div class="links">
+        {% if r.published_url %}<a class="pill pill-strong" href="{{ r.published_url }}" target="_blank" rel="noopener noreferrer">Read on {{ r.published_in }}</a>{% endif %}
+        {% if r.full_text != false %}<a class="pill" href="{{ r.url }}">Read the review</a>{% endif %}
+      </div>
+    </article>
+    {% endif %}{% endfor %}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="bar-exam-intro card">
+      <div>
+        <div class="kicker">Album Reviews</div>
+        <h2>The Bar Exam</h2>
+        <p>A Bar Exam is my notes from my true first listen to a project. I share in-depth thoughts on anything from flows, rhymes and beats to creative direction, track placement and concepts. Then I rate it on a three-point scale.</p>
+        <div class="stats">
+          <div><strong>{{ site.reviews.size }}</strong><span>reviews</span></div>
+          <div><strong>{{ oldest.date | date: "%Y" }}</strong><span>first exam</span></div>
+          <div><strong>{{ above_count }}</strong><span>above the bar</span></div>
+        </div>
+        <a class="pill pill-strong" href="/writing/reviews/">Browse the archive &rarr;</a>
+      </div>
+      <ul class="scale">
+        <li><span class="rating rating-above">Above the Bar</span><p>Sets a new precedent for the artist. A tremendous accomplishment altogether.</p></li>
+        <li><span class="rating rating-at">At the Bar</span><p>The middle of the line. Just okay, not really moving the needle either way.</p></li>
+        <li><span class="rating rating-below">Below the Bar</span><p>Needs help and doesn't keep my attention throughout.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">Latest Bar Exams</h2>
+    <div class="grid">
+      {% for r in reviews limit: 4 %}
+      <a class="card review-card" href="{{ r.url }}">
+        <div class="kicker">{{ r.date | date: "%Y" }}</div>
+        <h3>{{ r.title }}</h3>
+        <p class="review-artist">{{ r.artist }}</p>
+        <span class="rating rating-{{ r.rating }}">{{ r.rating_label }}</span>
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+</main>

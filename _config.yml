@@ -1,0 +1,17 @@
+title: Luc DiMarzio
+description: The Thoughtful Creative.
+markdown: kramdown
+
+# Album reviews live in _reviews/ — one Markdown file per review.
+# To add a review, copy any file in _reviews/, rename it, and change the details at the top.
+collections:
+  reviews:
+    output: true
+    permalink: /writing/reviews/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: reviews
+    values:
+      layout: review

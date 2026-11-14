@@ -1,0 +1,94 @@
+---
+layout: default
+title: The Bar Exam Archive
+nav: writing
+description: Every Bar Exam — Luc DiMarzio's first-listen album reviews of Christian hip-hop, going back to 2018.
+---
+<main class="container">
+  <section class="hero">
+    <div class="kicker">Writing &middot; Album Reviews</div>
+    <h1>The Bar Exam Archive</h1>
+    <p class="subhead">My notes from the very first listen of a project: flows, rhymes, beats, creative direction, track placement and concepts. Then a verdict on a three-point scale.</p>
+  </section>
+
+  <section class="section archive">
+    <div class="archive-tools">
+      <label class="search">
+        <span class="sr-only">Search reviews</span>
+        <input id="review-search" type="search" placeholder="Search by artist or album" autocomplete="off" />
+      </label>
+      <div class="filters" role="group" aria-label="Filter by rating">
+        <button type="button" class="filter is-on" data-filter="all">All <span data-count="all"></span></button>
+        <button type="button" class="filter" data-filter="above">Above <span data-count="above"></span></button>
+        <button type="button" class="filter" data-filter="at">At <span data-count="at"></span></button>
+        <button type="button" class="filter" data-filter="below">Below <span data-count="below"></span></button>
+      </div>
+    </div>
+
+    {% assign reviews = site.reviews | sort: "date" | reverse %}
+    {% assign current_year = "" %}
+    {% for r in reviews %}
+      {% assign y = r.date | date: "%Y" %}
+      {% if y != current_year %}
+        {% unless forloop.first %}</ol></div>{% endunless %}
+        <div class="year-group">
+          <h2 class="year">{{ y }}</h2>
+          <ol class="review-list">
+        {% assign current_year = y %}
+      {% endif %}
+            <li class="review-row" data-rating="{{ r.rating }}" data-search="{{ r.artist | downcase | escape }} {{ r.title | downcase | escape }}">
+              <a href="{{ r.url }}">
+                <span class="row-main">
+                  <span class="row-album">{{ r.title }}</span>
+                  <span class="row-artist">{{ r.artist }} &middot; {{ r.format }}</span>
+                </span>
+                <span class="rating rating-{{ r.rating }}">{{ r.rating_label }}</span>
+              </a>
+            </li>
+      {% if forloop.last %}</ol></div>{% endif %}
+    {% endfor %}
+
+    <p class="empty" hidden>No reviews match that search.</p>
+  </section>
+</main>
+
+<script>
+(function () {
+  var rows = Array.prototype.slice.call(document.querySelectorAll('.review-row'));
+  var groups = Array.prototype.slice.call(document.querySelectorAll('.year-group'));
+  var input = document.getElementById('review-search');
+  var buttons = Array.prototype.slice.call(document.querySelectorAll('.filter'));
+  var empty = document.querySelector('.empty');
+  var rating = 'all';
+
+  var counts = { all: rows.length, above: 0, at: 0, below: 0 };
+  rows.forEach(function (r) { counts[r.dataset.rating]++; });
+  Object.keys(counts).forEach(function (k) {
+    var el = document.querySelector('[data-count="' + k + '"]');
+    if (el) el.textContent = counts[k];
+  });
+
+  function apply() {
+    var q = input.value.trim().toLowerCase();
+    var shown = 0;
+    rows.forEach(function (r) {
+      var ok = (rating === 'all' || r.dataset.rating === rating) && (!q || r.dataset.search.indexOf(q) !== -1);
+      r.hidden = !ok;
+      if (ok) shown++;
+    });
+    groups.forEach(function (g) {
+      g.hidden = !g.querySelector('.review-row:not([hidden])');
+    });
+    empty.hidden = shown !== 0;
+  }
+
+  buttons.forEach(function (b) {
+    b.addEventListener('click', function () {
+      rating = b.dataset.filter;
+      buttons.forEach(function (x) { x.classList.toggle('is-on', x === b); });
+      apply();
+    });
+  });
+  input.addEventListener('input', apply);
+})();
+</script>

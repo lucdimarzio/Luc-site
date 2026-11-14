@@ -1,0 +1,39 @@
+---
+layout: default
+nav: writing
+---
+<main class="container">
+  <article class="review">
+    <a class="back-link" href="/writing/reviews/">&larr; All reviews</a>
+
+    <div class="review-head">
+      <div class="kicker">Bar Exam &middot; {% if page.date_approximate %}{{ page.date | date: "%Y" }}{% else %}{{ page.date | date: "%B %-d, %Y" }}{% endif %}</div>
+      <h1>{{ page.title }}</h1>
+      <p class="review-artist">{{ page.artist }} <span>&middot; {{ page.format }}</span></p>
+      <span class="rating rating-{{ page.rating }}">{{ page.rating_label }}</span>
+      {% if page.published_url %}
+      <p class="review-source">Originally published in <a href="{{ page.published_url }}" target="_blank" rel="noopener noreferrer">{{ page.published_in }}</a></p>
+      {% endif %}
+    </div>
+
+    <div class="prose">
+      {{ content }}
+    </div>
+
+    {% if page.full_text == false and page.published_url %}
+    <div class="read-more">
+      <a class="pill pill-strong" href="{{ page.published_url }}" target="_blank" rel="noopener noreferrer">Read the full review on {{ page.published_in }} &rarr;</a>
+    </div>
+    {% endif %}
+
+    <div class="verdict rating-{{ page.rating }}">
+      <span>Overall rating</span>
+      <strong>{{ page.rating_label }}</strong>
+    </div>
+
+    <nav class="review-nav">
+      {% if page.next %}<a class="card" href="{{ page.next.url }}"><span>Newer</span>{{ page.next.artist }} &mdash; {{ page.next.title }}</a>{% else %}<span></span>{% endif %}
+      {% if page.previous %}<a class="card align-right" href="{{ page.previous.url }}"><span>Older</span>{{ page.previous.artist }} &mdash; {{ page.previous.title }}</a>{% endif %}
+    </nav>
+  </article>
+</main>
