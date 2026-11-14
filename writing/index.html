@@ -56,6 +56,26 @@ description: Album reviews, interviews and lists from Luc DiMarzio — including
     </div>
   </section>
 
+  {% assign trainings = site.trainings | sort: "order" %}
+  {% if trainings.size > 0 %}
+  <section class="section">
+    <div class="section-head">
+      <h2 class="section-title">Leadership</h2>
+      <a class="pill" href="/writing/leadership/">All team trainings &rarr;</a>
+    </div>
+    <p class="section-intro">Trainings I've built for my teams, and the vision and culture behind them.</p>
+    <div class="grid">
+      {% for t in trainings limit: 3 %}
+      <a class="card training-card" href="{{ t.url }}">
+        <img src="/assets/img/trainings/{{ t.slides }}/01.jpg" alt="" width="1600" height="900" loading="lazy" />
+        <div class="kicker">Team Training</div>
+        <h3>{{ t.title }}</h3>
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
   <section class="section">
     <div class="section-head">
       <h2 class="section-title">Interviews</h2>

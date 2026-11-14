@@ -8,6 +8,10 @@ collections:
   reviews:
     output: true
     permalink: /writing/reviews/:name/
+  # Team trainings live in _trainings/ — one file per training, slides in assets/img/trainings/<name>/
+  trainings:
+    output: true
+    permalink: /writing/leadership/:name/
 
 defaults:
   - scope:
@@ -15,3 +19,8 @@ defaults:
       type: reviews
     values:
       layout: review
+  - scope:
+      path: ""
+      type: trainings
+    values:
+      layout: training

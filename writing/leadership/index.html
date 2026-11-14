@@ -1,0 +1,27 @@
+---
+layout: default
+title: Leadership
+nav: writing
+description: Team trainings from Luc DiMarzio on worship leadership, discipleship, creativity and the culture of a healthy worship team.
+---
+{% assign trainings = site.trainings | sort: "order" %}
+<main class="container">
+  <section class="hero">
+    <div class="kicker">Writing &middot; Leadership</div>
+    <h1>Leadership</h1>
+    <p class="subhead">Most of these started as trainings for my teams. Together they show the vision for what we do and the culture I try to build: character over talent, discipleship over performance, and a team that's healthy enough to last.</p>
+  </section>
+
+  <section class="section">
+    <div class="grid">
+      {% for t in trainings %}
+      <a class="card training-card" href="{{ t.url }}">
+        {% if t.slides %}<img src="/assets/img/trainings/{{ t.slides }}/01.jpg" alt="" width="1600" height="900" loading="lazy" />{% else %}<div class="training-cover"><span>{{ t.title }}</span></div>{% endif %}
+        <div class="kicker">{% if t.slides %}Team Training &middot; {{ t.slide_count }} slides{% else %}Written teaching{% endif %}</div>
+        <h3>{{ t.title }}</h3>
+        <p>{{ t.summary }}</p>
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+</main>
