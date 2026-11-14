@@ -481,3 +481,13 @@ h1{
 @media (max-width: 520px){
   .review-card{ grid-column:span 12; }
 }
+
+/* Interviews */
+.section-head{ display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:10px; }
+.section-head .section-title{ margin:0; }
+.interview-card{ grid-column:span 4; display:flex; flex-direction:column; }
+.interview-card h3{ font-size:16px; line-height:1.4; margin:8px 0 0; }
+.row-out{ color:var(--muted); font-size:18px; }
+@media (max-width: 820px){
+  .interview-card{ grid-column:span 12; }
+}

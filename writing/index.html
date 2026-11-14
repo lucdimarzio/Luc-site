@@ -57,6 +57,21 @@ description: Album reviews, interviews and lists from Luc DiMarzio — including
   </section>
 
   <section class="section">
+    <div class="section-head">
+      <h2 class="section-title">Interviews</h2>
+      <a class="pill" href="/writing/interviews/">All {{ site.data.interviews.size }} interviews &rarr;</a>
+    </div>
+    <div class="grid">
+      {% for i in site.data.interviews limit: 6 %}
+      <a class="card interview-card" href="{{ i.url }}" target="_blank" rel="noopener noreferrer">
+        <div class="kicker">{{ i.outlet }} &middot; {{ i.date | date: "%b %Y" }}</div>
+        <h3>{{ i.title }}</h3>
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="section">
     <h2 class="section-title">Latest Bar Exams</h2>
     <div class="grid">
       {% for r in reviews limit: 4 %}
