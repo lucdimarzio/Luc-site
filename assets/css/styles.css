@@ -667,3 +667,26 @@ h1, h2, h3{ font-weight:700; letter-spacing:-.01em; }
 h1{ letter-spacing:-.02em; }
 .brand strong{ font-weight:800; }
 .pill{ font-weight:600; }
+
+/* Music page: video grid + album card */
+.video-grid{ display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:18px; margin:18px 0 60px; }
+.video-card{ grid-column:auto; display:flex; flex-direction:column; gap:6px; padding:12px 12px 18px; color:var(--text); text-decoration:none; transition:border-color .2s, transform .2s; }
+.video-card:hover{ border-color:var(--accent); transform:translateY(-2px); opacity:1; }
+.video-card h3{ font-size:18px; margin:0; }
+.video-card p{ margin:0 0 6px; font-size:14px; flex:1; }
+.video-card .kicker{ margin-top:8px; }
+.video-thumb-wrap{ position:relative; aspect-ratio:16/9; border-radius:12px; overflow:hidden; background:#000; }
+.video-thumb-wrap img{ width:100%; height:100%; object-fit:cover; display:block; position:relative; z-index:1; }
+.video-thumb-wrap.is-art::before{ content:""; position:absolute; inset:-20px; background:var(--art) center/cover; filter:blur(18px) brightness(.55); }
+.video-thumb-wrap.is-art img{ object-fit:contain; }
+.play-badge{ position:absolute; z-index:2; left:12px; bottom:12px; width:42px; height:42px; border-radius:50%; display:grid; place-items:center; background:rgba(11,12,16,.75); color:#fff; border:1px solid rgba(255,255,255,.25); transition:background .2s, color .2s; }
+.video-card:hover .play-badge{ background:var(--accent); color:#0b0c10; border-color:transparent; }
+.album-card{ grid-column:auto; display:grid; grid-template-columns:350px minmax(0,1fr); gap:36px; align-items:center; padding:24px; margin-top:18px; }
+.album-card h3{ font-size:30px; margin:8px 0 8px; }
+.album-card p{ font-size:16px; margin:0 0 20px; }
+@media (max-width: 960px){ .video-grid{ grid-template-columns:repeat(2, minmax(0,1fr)); } }
+@media (max-width: 720px){
+  .video-grid{ grid-template-columns:1fr; }
+  .album-card{ grid-template-columns:1fr; gap:20px; padding:16px; }
+  .album-embed{ max-width:350px; width:100%; margin:0 auto; }
+}
