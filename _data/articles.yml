@@ -300,6 +300,18 @@
   outlet: newh2o
   url: "/writing/articles/best-albums-of-2018/"
   local: true
+- title: "Bar Exam Midterms 2018"
+  date: 2018-06-27
+  kind: list
+  outlet: newh2o
+  url: "/writing/articles/bar-exam-midterms-2018/"
+  local: true
+- title: "Bar Exam: The First Quarter"
+  date: 2018-03-26
+  kind: list
+  outlet: newh2o
+  url: "/writing/articles/bar-exam-first-quarter-2018/"
+  local: true
 - title: "Top CHH Albums of 2017"
   date: 2018-01-08
   kind: feature
