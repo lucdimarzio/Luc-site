@@ -24,3 +24,5 @@ defaults:
       type: trainings
     values:
       layout: training
+
+submit_form_endpoint: "https://formspree.io/f/xvkazedg"

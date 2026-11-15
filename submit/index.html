@@ -1,0 +1,110 @@
+---
+layout: default
+title: Submit
+nav: submit
+description: Submit music for a Bar Exam review, or reach out to Luc DiMarzio about leadership coaching, vocal coaching or team training.
+---
+<main class="container">
+  <section class="hero">
+    <div class="kicker">Submit</div>
+    <h1>Let's work together.</h1>
+    <p class="subhead">Got a project you want me to hear? Want help with your team, your leadership or your voice? Fill this out and I'll get back to you.</p>
+  </section>
+
+  <section class="section submit-grid">
+    <form class="card submit-form" action="{{ site.submit_form_endpoint }}" method="POST">
+      <input type="hidden" name="_subject" value="New submission from lucdimarzio.com" />
+      <p class="hp" aria-hidden="true"><label>Leave this empty <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" /></label></p>
+
+      <div class="field-row">
+        <label class="field">
+          <span>Name</span>
+          <input type="text" name="name" autocomplete="name" required />
+        </label>
+        <label class="field">
+          <span>Email</span>
+          <input type="email" name="email" autocomplete="email" required />
+        </label>
+      </div>
+
+      <label class="field">
+        <span>What can I help with?</span>
+        <select name="request_type" id="request-type" required>
+          <option value="" disabled selected>Choose one</option>
+          <option>Album or EP review (Bar Exam)</option>
+          <option>Single for Luc's Picks</option>
+          <option>Interview request</option>
+          <option>Leadership coaching</option>
+          <option>Vocal coaching</option>
+          <option>Worship team training</option>
+          <option>Something else</option>
+        </select>
+      </label>
+
+      <div class="music-fields" hidden>
+        <div class="field-row">
+          <label class="field">
+            <span>Artist name</span>
+            <input type="text" name="artist" />
+          </label>
+          <label class="field">
+            <span>Project or song title</span>
+            <input type="text" name="project_title" />
+          </label>
+        </div>
+        <div class="field-row">
+          <label class="field">
+            <span>Link to listen</span>
+            <input type="url" name="listen_link" placeholder="Spotify, Apple Music, SoundCloud, private link..." />
+          </label>
+          <label class="field">
+            <span>Release date</span>
+            <input type="date" name="release_date" />
+          </label>
+        </div>
+      </div>
+
+      <div class="team-fields" hidden>
+        <label class="field">
+          <span>Church or organization</span>
+          <input type="text" name="organization" />
+        </label>
+      </div>
+
+      <label class="field">
+        <span>Tell me more</span>
+        <textarea name="message" rows="6" required></textarea>
+      </label>
+
+      <button type="submit" class="pill pill-strong submit-btn">Send it</button>
+    </form>
+
+    <aside class="submit-side">
+      <div class="card">
+        <h3>Music submissions</h3>
+        <p>I give every project I review a true first listen. Send a link I can stream, and if it's not out yet, a private link works too. I can't promise to review everything that comes in.</p>
+        <a class="link-arrow" href="/writing/reviews/">See past Bar Exams &rarr;</a>
+      </div>
+      <div class="card">
+        <h3>Coaching &amp; training</h3>
+        <p>Leadership coaching, vocal coaching and worship team training for churches and creative teams. Tell me a little about your team and what you're hoping for.</p>
+        <a class="link-arrow" href="/writing/leadership/">See my team trainings &rarr;</a>
+      </div>
+    </aside>
+  </section>
+</main>
+
+<script>
+(function () {
+  var type = document.getElementById('request-type');
+  var music = document.querySelector('.music-fields');
+  var team = document.querySelector('.team-fields');
+  function update() {
+    var v = type.value;
+    music.hidden = !/review|Luc's Picks|Interview/.test(v);
+    team.hidden = !/coaching|training/i.test(v);
+  }
+  type.addEventListener('change', update);
+  update();
+})();
+</script>
