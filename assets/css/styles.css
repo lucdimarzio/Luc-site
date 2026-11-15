@@ -1,4 +1,5 @@
 :root{
+  --font:"Avenir Next","Avenir","Figtree",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
   --bg:#0b0c10;
   --panel:#12131a;
   --text:#f2f3f5;
@@ -15,7 +16,7 @@
 html{ scroll-behavior:smooth; }
 body{
   margin:0;
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Helvetica,Arial,sans-serif;
+  font-family:var(--font);
   background:
     radial-gradient(1200px 600px at 20% 0%, rgba(6,182,212,.16), transparent 55%),
     radial-gradient(900px 500px at 80% 20%, rgba(6,182,212,.10), transparent 60%),
@@ -659,3 +660,10 @@ h1{
   .home-pillars{ grid-template-columns:1fr; }
   .home-cta h2, .home-now h2{ font-size:24px; }
 }
+
+/* Brand type: Avenir Next on Apple devices, Figtree everywhere else */
+button, input, select, textarea{ font-family:inherit; }
+h1, h2, h3{ font-weight:700; letter-spacing:-.01em; }
+h1{ letter-spacing:-.02em; }
+.brand strong{ font-weight:800; }
+.pill{ font-weight:600; }
