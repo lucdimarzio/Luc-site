@@ -1,42 +1,14 @@
 ---
+layout: default
+title: Store
+nav: store
+description: "Books and merch from Luc DiMarzio."
 ---
-
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Store — Luc DiMarzio</title>
-  <meta name="description" content="Books and merch from Luc DiMarzio." />
-  <link rel="stylesheet" href="/assets/css/styles.css?v={{ site.time | date: '%s' }}" />
-</head>
-
-<body>
-  <header>
-  <div class="container">
-    <nav class="nav">
-      <a class="brand" href="/">
-        <strong>Luc DiMarzio</strong>
-      </a>
-
-      <div class="menu">
-        <a href="/">Home</a>
-        <a href="/music/">Music</a>
-        <a href="/playlists/">Playlists</a>
-        <a href="/writing/">Writing</a>
-        <a class="active" href="/store/">Store</a>
-        <a href="/about/">About</a>
-        <a href="/submit/">Submit</a>
-      </div>
-
-      <a class="cta" href="https://venmo.com/u/lucdimarzio" target="_blank" rel="noopener noreferrer">Support</a>
-    </nav>
-  </div>
-</header>
-  <main class="container">
-    <section class="page-hero">
-      <h1 class="h1">Store</h1>
-      <p class="lead">Books, merch, and other things I’ve made.</p>
+<main class="container">
+    <section class="hero">
+      <div class="kicker">Store</div>
+      <h1>Store</h1>
+      <p class="subhead">Books, merch, and other things I’ve made.</p>
     </section>
 
     <section class="section">
@@ -77,22 +49,4 @@
 
       </div>
     </section>
-
-    <section class="fineprint">
-      <p class="muted">
-        Links may open on third-party sites.
-      </p>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <small class="muted">© <span id="year"></span> Luc DiMarzio</small>
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+</main>

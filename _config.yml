@@ -1,6 +1,8 @@
 title: Luc DiMarzio
 description: Luc DiMarzio — music, playlists and writing about hip-hop and faith.
 markdown: kramdown
+url: "https://lucdimarzio.com"
+share_image: /assets/img/share.jpg
 
 # Album reviews live in _reviews/ — one Markdown file per review.
 # To add a review, copy any file in _reviews/, rename it, and change the details at the top.
