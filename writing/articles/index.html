@@ -19,7 +19,7 @@ description: Features, essays and lists by Luc DiMarzio about Christian hip-hop,
     <h2 class="section-title">Features &amp; Essays</h2>
     <div class="grid">
       {% for a in features %}
-      <a class="card interview-card" href="{{ a.url }}" target="_blank" rel="noopener noreferrer">
+      <a class="card interview-card" href="{{ a.url }}"{% unless a.local %} target="_blank" rel="noopener noreferrer"{% endunless %}>
         <div class="kicker">{{ a.outlet }} &middot; {{ a.date | date: "%b %Y" }}</div>
         <h3>{{ a.title }}</h3>
       </a>
@@ -40,12 +40,12 @@ description: Features, essays and lists by Luc DiMarzio about Christian hip-hop,
         {% assign current_year = y %}
       {% endif %}
             <li class="review-row">
-              <a href="{{ a.url }}" target="_blank" rel="noopener noreferrer">
+              <a href="{{ a.url }}"{% unless a.local %} target="_blank" rel="noopener noreferrer"{% endunless %}>
                 <span class="row-main">
                   <span class="row-album">{{ a.title }}</span>
                   <span class="row-artist">{{ a.outlet }} &middot; {{ a.date | date: "%B %-d, %Y" }}</span>
                 </span>
-                <span class="row-out" aria-hidden="true">&nearr;</span>
+                <span class="row-out" aria-hidden="true">{% if a.local %}&rarr;{% else %}&nearr;{% endif %}</span>
               </a>
             </li>
       {% if forloop.last %}</ol></div>{% endif %}
@@ -58,12 +58,12 @@ description: Features, essays and lists by Luc DiMarzio about Christian hip-hop,
     <ol class="review-list">
       {% for a in news %}
       <li class="review-row">
-        <a href="{{ a.url }}" target="_blank" rel="noopener noreferrer">
+        <a href="{{ a.url }}"{% unless a.local %} target="_blank" rel="noopener noreferrer"{% endunless %}>
           <span class="row-main">
             <span class="row-album">{{ a.title }}</span>
             <span class="row-artist">{{ a.outlet }} &middot; {{ a.date | date: "%B %-d, %Y" }}</span>
           </span>
-          <span class="row-out" aria-hidden="true">&nearr;</span>
+          <span class="row-out" aria-hidden="true">{% if a.local %}&rarr;{% else %}&nearr;{% endif %}</span>
         </a>
       </li>
       {% endfor %}

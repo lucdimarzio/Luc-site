@@ -99,7 +99,7 @@ description: Album reviews, interviews and lists from Luc DiMarzio — including
     </div>
     <div class="grid">
       {% for a in features limit: 3 %}
-      <a class="card interview-card" href="{{ a.url }}" target="_blank" rel="noopener noreferrer">
+      <a class="card interview-card" href="{{ a.url }}"{% unless a.local %} target="_blank" rel="noopener noreferrer"{% endunless %}>
         <div class="kicker">{{ a.outlet }} &middot; {{ a.date | date: "%b %Y" }}</div>
         <h3>{{ a.title }}</h3>
       </a>

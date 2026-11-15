@@ -294,3 +294,15 @@
   kind: news
   outlet: Rapzilla
   url: "https://rapzilla.com/2019-03-tobe-nwigwe-gets-more-co-signs-from-hip-hop-legends/"
+- title: "My Top 10 Albums of 2018"
+  date: 2018-12-21
+  kind: list
+  outlet: newh2o
+  url: "/writing/articles/best-albums-of-2018/"
+  local: true
+- title: "Top CHH Albums of 2017"
+  date: 2018-01-08
+  kind: feature
+  outlet: newh2o
+  url: "/writing/articles/top-chh-albums-of-2017/"
+  local: true
