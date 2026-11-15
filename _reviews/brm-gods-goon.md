@@ -2,12 +2,14 @@
 title: "God's Goon"
 artist: "BRM"
 format: Album
-date: 2019-07-01
-date_approximate: true
+date: 2019-07-27
+date_approximate: false
 rating: below
 rating_label: "Slightly Below the Bar"
 summary: "BRM released his new album last week, God’s Goon, and I’m sharing my bar exam for it today. This is his first album released on his new label Rapture Ready Productions and it features some heavy hitters from…"
 source_file: "Bar Exams (compilation)"
+published_in: "newh2o"
+published_url: "https://web.archive.org/web/2020/https://newh2o.com/bar-exam-brm-gods-goon-review/"
 ---
 
 BRM released his new album last week, God’s Goon, and I’m sharing my bar exam for it today. This is his first album released on his new label Rapture Ready Productions and it features some heavy hitters from the slowly burgeoning underground CHH scene.

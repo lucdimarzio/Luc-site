@@ -8,6 +8,8 @@ rating: above
 rating_label: "Above the Bar"
 summary: "Jay Sanon dropped his \"Matters of the Heart\" project today, and while I've been a little detached from hip-hop for the past couple months, this is one that's been on my radar."
 source_file: "Bar Exam 2019 - Jay Sanon Matters Of The Heart.txt"
+published_in: "newh2o"
+published_url: "https://web.archive.org/web/2020/https://newh2o.com/bar-exam-jay-sanon-matters-of-the-heart/"
 ---
 
 Jay Sanon dropped his "Matters of the Heart" project today, and while I've been a little detached from hip-hop for the past couple months, this is one that's been on my radar.
