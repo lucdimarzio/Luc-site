@@ -5,6 +5,9 @@
   --text:#f2f3f5;
   --muted:#b7bac3;
 --accent: #06b6d4; /* cyan */
+  --accent-hi:#22d3ee;
+  --accent-ink:#03191d;
+  --accent-soft:rgba(6,182,212,.14);
   --border:rgba(124,58,237,.20);
   --max:1080px;
   --above:#06b6d4;
@@ -634,7 +637,7 @@ h1{
 .home-hero{ position:relative; margin:28px 0 64px; border-radius:22px; overflow:hidden; border:1px solid var(--border); min-height:520px; display:flex; align-items:flex-end; }
 .home-hero-img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:55% 30%; }
 .home-hero::after{ content:""; position:absolute; inset:0; background:linear-gradient(90deg, rgba(11,12,16,.92) 0%, rgba(11,12,16,.55) 45%, rgba(11,12,16,0) 75%), linear-gradient(0deg, rgba(11,12,16,.85) 0%, rgba(11,12,16,0) 50%); }
-.home-hero-text{ position:relative; z-index:1; padding:44px; max-width:520px; }
+.home-hero-text{ position:relative; z-index:1; padding:44px; max-width:640px; }
 .home-hero h1{ font-size:clamp(42px, 6vw, 72px); margin:10px 0 8px; }
 .home-tag{ font-size:20px; letter-spacing:.5px; margin:0 0 24px; color:var(--text); }
 .home-actions{ display:flex; gap:10px; flex-wrap:wrap; margin-bottom:16px; }
@@ -717,3 +720,36 @@ h1{ letter-spacing:-.02em; }
   .merch-strip{ grid-template-columns:repeat(2, minmax(0,1fr)); }
   .merch-text{ flex-direction:column; align-items:flex-start; }
 }
+
+/* ===== Accent color: one confident cyan across the site ===== */
+::selection{ background:rgba(6,182,212,.35); color:#fff; }
+:focus-visible{ outline:2px solid var(--accent); outline-offset:3px; }
+
+/* Primary buttons */
+.pill-strong, .filter.is-on{ background:var(--accent); color:var(--accent-ink); border-color:transparent; font-weight:700; }
+.pill-strong:hover{ background:var(--accent-hi); color:var(--accent-ink); opacity:1; box-shadow:0 6px 22px rgba(6,182,212,.35); }
+a:hover .pill-strong{ background:var(--accent-hi); }
+
+/* Secondary buttons */
+.pill{ transition:border-color .18s, background-color .18s, color .18s, box-shadow .18s; }
+.pill:not(.pill-strong):hover{ border-color:var(--accent); background:var(--accent-soft); opacity:1; }
+
+/* Header Support button */
+.cta{ background:var(--accent); color:var(--accent-ink); font-weight:700; border-color:transparent; }
+.cta:hover{ background:var(--accent-hi); color:var(--accent-ink); box-shadow:0 6px 22px rgba(6,182,212,.35); }
+
+/* Menu: current page gets a cyan underline */
+.menu a.active{ color:var(--text); background:transparent; box-shadow:inset 0 -2px 0 var(--accent); border-radius:10px 10px 0 0; }
+
+/* Clickable cards light up cyan on hover */
+a.card{ transition:border-color .2s, transform .2s; }
+a.card:hover{ border-color:var(--accent); opacity:1; }
+
+/* Links inside reviews and articles */
+.prose a{ color:var(--text); text-decoration:underline; text-decoration-color:var(--accent); text-decoration-thickness:2px; text-underline-offset:3px; }
+.prose a:hover{ color:var(--accent-hi); }
+.link-arrow:hover{ color:var(--accent-hi); }
+
+/* Section titles get a short cyan bar */
+.section-title{ display:flex; align-items:center; gap:10px; }
+.section-title::before{ content:""; width:18px; height:3px; border-radius:2px; background:var(--accent); flex:none; }
