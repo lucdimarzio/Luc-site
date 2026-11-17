@@ -33,4 +33,4 @@ There’s a good moment here where an electric guitar solo gets interrupted by W
 
 **Lovely** — “you’re never far enough” Rg talking about how we can lose sight if we focus on the wrong things. Again, it feels like it could be treated as a song from the perspective of a human to human relationship, but it parallels the broken relationship between man and God. “my oh my/you been on my mind since 1995/I can’t lie/you the only thing I want” Quintessential hip-hop outro montage of voicemails from friends and family sending encouragement.
 
-We’ve known RG for awhile as an artist who can bring nice hooks, and his guest features are usually off the chain. “Pleasant Hill” proves WhatupRG to be a complete artist. This album is an incredibly enjoyable album, and while the subject matter might not have much depth, it’s all really well done.
+We’ve known RG for a while as an artist who can bring nice hooks, and his guest features are usually off the chain. “Pleasant Hill” proves WhatupRG to be a complete artist. This album is an incredibly enjoyable album, and while the subject matter might not have much depth, it’s all really well done.

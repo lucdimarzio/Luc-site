@@ -18,7 +18,7 @@ For those of you unfamiliar with my bar exams, I am sharing all of my notes from
 
 ### TRACK 1 – Without Purpose We Would Not Exist
 
-The album opens with a rant from a mom. This is a clip from a viral video numerous years ago. It hits deep and is so relatable. #parentsdontunderstand Guitars grow underneath the mom rant. The melody is catchy and it bobs across the trap beat perfectly.Emotional. This is like if The Used was a hip-hop act. Closes out with that dial up modem sound. Nostalgia. All the feels on this intro.
+The album opens with a rant from a mom. This is a clip from a viral video numerous years ago. It hits deep and is so relatable. #parentsdontunderstand Guitars grow underneath the mom rant. The melody is catchy and it bobs across the trap beat perfectly. Emotional. This is like if The Used was a hip-hop act. Closes out with that dial up modem sound. Nostalgia. All the feels on this intro.
 
 ### TRACK 2 – Sky Without A Light
 

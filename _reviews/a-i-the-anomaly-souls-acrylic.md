@@ -26,7 +26,7 @@ For those of you unfamiliar with my bar exams, I am sharing all of my notes from
 
 **Kodak Of Memories** — Laidback vibes here. Rhodes and an easy drum loop. A.I. is reminiscing on her mother, landing on a challenge to spend time with those you love. She looks at her kids and sees herself in them. We’re just trying to be a reflection of the Father that God is to us. No one is perfect, we’re just trying to make the best of the time that we have.
 
-**Don’t Fail Me** — I actually heard this track last year and interviewed her about this single release. Marriage isn’t easy. There’s vulnerability at every turn, and the only one who will truly not fail is God. “There’s a whole lot of chase in this” The ad-libs and the echos in the raps are so well done. It all matches the honesty in the lyrics.
+**Don’t Fail Me** — I actually heard this track last year and interviewed her about this single release. Marriage isn’t easy. There’s vulnerability at every turn, and the only one who will truly not fail is God. “There’s a whole lot of chase in this” The ad-libs and the echoes in the raps are so well done. It all matches the honesty in the lyrics.
 
 We have this internal conversation with ourselves about how we don’t want to fail those we love, and at the same time are pleading with them to not fail us. It’s interesting to me how it fits into the larger scheme of this project. At the time of its release, this track felt like a single that would stand on its own. The direction that the snippet at the end takes us connects it to the big idea of the project and the canvas of life.
 
@@ -46,7 +46,7 @@ She throws that Kendrick-like raspy and airy voice on top of the melodic flow. S
 
 **I’m Just Saying** — Electric guitar solo fades away quickly into a grimy beat. Selah chops it up at the top. The wordplay on these kilobit rhymes is cool. They’re talking about selling out, and moving in the ways of the world rather than standing up for what’s right. Calling out fakeness.
 
-**Gold** — We’re twelve tracks in and not one of these tracks has begun the same way. Especially with these longer projects, artists tend to get formulaic. Not in A.I.’s case. I appreciate the intentionality behind how everything ebbs and flows together. The keys in the instrumental sounds like the chimes that would be part of a 70s game show or sit-com theme song.
+**Gold** — We’re twelve tracks in and not one of these tracks has begun the same way. Especially with these longer projects, artists tend to get formulaic. Not in A.I.’s case. I appreciate the intentionality behind how everything ebbs and flows together. The keys in the instrumental sound like the chimes that would be part of a 70s game show or sit-com theme song.
 
 Eshon is at the top of this song. I appreciate how A.I. lets herself clean up after most of these features. I think I’m used to hearing the features later in songs in general. Just an observation. This song is about respecting black women.
 

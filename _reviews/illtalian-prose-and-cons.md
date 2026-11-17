@@ -6,13 +6,13 @@ date: 2018-01-12
 date_approximate: false
 rating: above
 rating_label: "Above the Bar"
-summary: "It’s cool to see that this Bar Exam thing catching on. We’ve had a good amount of response to the posts we’ve shared this week and are very excited to be able to use this to challenge and encourage artists. I had the…"
+summary: "It’s cool to see that this Bar Exam thing is catching on. We’ve had a good amount of response to the posts we’ve shared this week and are very excited to be able to use this to challenge and encourage artists. I had the…"
 source_file: "newh2o.com (Wayback Machine)"
 published_in: "newh2o"
 published_url: "https://web.archive.org/web/2020/https://newh2o.com/bar-exam-illtalian-prose-and-cons-single/"
 ---
 
-It’s cool to see that this Bar Exam thing catching on. We’ve had a good amount of response to the posts we’ve shared this week and are very excited to be able to use this to challenge and encourage artists. I had the honor of listening to a fellow Italian’s song today. The name of the track is *Prose and Cons*, by the artist **Illtalian.**### Initial Observation
+It’s cool to see that this Bar Exam thing is catching on. We’ve had a good amount of response to the posts we’ve shared this week and are very excited to be able to use this to challenge and encourage artists. I had the honor of listening to a fellow Italian’s song today. The name of the track is *Prose and Cons*, by the artist **Illtalian.**### Initial Observation
 
 At first look, the cover art is appealing and feels classic, almost like an Adele album. (Not a diss just an observation) The description of the album shares how this is all dedicated to the memory of a close friend, and before I click play on this track I feel like I’m about to encounter someone who takes himself seriously. Regardless, at the push of “play” I was pleased with what I heard.
 

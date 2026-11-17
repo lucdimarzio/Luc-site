@@ -11,7 +11,7 @@ summary: "Andy Mineo has been involved in the CHH game for a good minute. Going 
 source_file: "Bar Exams (compilation)"
 ---
 
-Andy Mineo has been involved in the CHH game for a good minute. Going from C-Lite to Saturday Morning Car Tunez to Heroes for Sale and Uncomfortable straight into our hearts. Not really… ok maybe really though in the homes of CHH-heads, Mineo is a household name. The last time he dropped a solo project was 2015, and while we heard that Magic & Bird album just last year, it’s been awhile since we’ve heard Andy on his own. Needless to say when he announced a new release at the beginning of the week, we were hyped. Andy has been open about his struggles with faith and anxiety among other things these past few years, so I was intrigued to hear how that journey has affected his art. Time for a bar exam.
+Andy Mineo has been involved in the CHH game for a good minute. Going from C-Lite to Saturday Morning Car Tunez to Heroes for Sale and Uncomfortable straight into our hearts. Not really… ok maybe really though in the homes of CHH-heads, Mineo is a household name. The last time he dropped a solo project was 2015, and while we heard that Magic & Bird album just last year, it’s been a while since we’ve heard Andy on his own. Needless to say when he announced a new release at the beginning of the week, we were hyped. Andy has been open about his struggles with faith and anxiety among other things these past few years, so I was intrigued to hear how that journey has affected his art. Time for a bar exam.
 
 ### Chapter 1: The Arrow (EP)
 

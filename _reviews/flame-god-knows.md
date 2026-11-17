@@ -31,7 +31,7 @@ So far this album is fresh, but here at track 6 the energy takes a dip for me. �
 
 Hold up though, we don’t stay in that slump for too long. “No Cosign” comes out swinging with epic strings and big thumpin’ bass lines. We’ve heard a lot of melody raps from **Flame**up to this point, but this song is straight up rhyming. There’s some cool effects on the vocals and the production is above the bar all around. Topically Flame is explaining that he doesn’t need a co-sign, that His treasure is above and not found in the words of men. KB blazes his feature. I’ll be repeating this song soon.
 
-The next three tracks however are part of a larger slump. “Make History” brings a challenge to not waste your life, and while the big horns in the instrumental were dope, the rest was a little dull for me. The son begins with a 7-11 (7 words 11 times) and I was lost by the time the verse drops. After this track there’s another skit, and then** Flame**is a little introspective on the song “Not Good Enough.”
+The next three tracks however are part of a larger slump. “Make History” brings a challenge to not waste your life, and while the big horns in the instrumental were dope, the rest was a little dull for me. The song begins with a 7-11 (7 words 11 times) and I was lost by the time the verse drops. After this track there’s another skit, and then** Flame**is a little introspective on the song “Not Good Enough.”
 
 Track 11 is entitled “Friday” and immediately it feels like summer. This beat is fun, and the second verse on this track is flames. We’re dealing with an incredibly versatile artist here.** Flame**can pull off any sound at a high level. J. Carter has a Chris Brown sound to him, and this is the feel good song this album needed.
 

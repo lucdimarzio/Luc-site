@@ -26,7 +26,7 @@ He rattles off an easy flow but a rhyme scheme full of punches. “I pray before
 
 OKF. – Interlude at the top. Sounds like a Pastor introducing Swoope. A Mike Todd shout-out at the top. I dig the samples in the instrumental. That part seems to be on loop, and the layers that are added are there to add to what Swoope is doing. He’s bumping Old Kirk Franklin. Swoope’s performances are so intricate. He never keeps the same tone or flow or pitch for too long. Another interlude at the end.
 
-**Cuz We Can** — Slower laid backbeat. The ingredients are all here, but it’s like they’re in the wrong order or something. Because the beat is nice, the hook is easy, but then I didn’t feel like Natalie’s verse hit the way it could have. I thought Swoope’s verse went bonkers, but I had tuned out by the time that came around because I felt like there was a bunch of fluff before it.
+**Cuz We Can** — Slower laid-back beat. The ingredients are all here, but it’s like they’re in the wrong order or something. Because the beat is nice, the hook is easy, but then I didn’t feel like Natalie’s verse hit the way it could have. I thought Swoope’s verse went bonkers, but I had tuned out by the time that came around because I felt like there was a bunch of fluff before it.
 
 **24** — The synth bass is moving around, with Aha stopping by for a chorus. Metaphors about a new day/24/Kobe. Yeah, this song bangs. It’s cool how most of these are less than three minutes long. Swoope doesn’t play around, he gets in and gets out, doesn’t feel like circling the plane over and over again. Makes me want to replay the track immediately.
 

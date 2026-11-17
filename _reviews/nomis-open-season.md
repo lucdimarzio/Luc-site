@@ -46,7 +46,7 @@ The first significant change to the music bed is next. The beat stays the same, 
 
 I dig the performance here by Josh. I feel like it’s fewer bars than the emcees before, but he’s confident in what he’s bringing. “You a slave to my rhyme’s pages.” He throws in that 2nd person perspective as well, so now I’m wondering who the audience of this track really is and if they’re all on the same page with it.
 
-Thomas Ianucci is no stranger to the bar exam, but it’s been awhile. His gravely voice almost fades in like he’s singing to us. He starts in the second person as well and seems to really have a beef with someone.
+Thomas Ianucci is no stranger to the bar exam, but it’s been a while. His gravelly voice almost fades in like he’s singing to us. He starts in the second person as well and seems to really have a beef with someone.
 
 “I do not have friends, only admirers/If you want this smoke, you need fire first/I bring the fireworks, you more fyre fest/And now you’re screwed like Ja Rule with the IRS”
 

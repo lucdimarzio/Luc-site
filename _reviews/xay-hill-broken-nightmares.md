@@ -34,7 +34,7 @@ For those of you unfamiliar with my bar exams, I am sharing all of my notes from
 
 **Fear Nobody (interlude)** — This is here in order to make a smoother transition into the next track.
 
-**Ready For War** — Laid back melodies over a building beat, Jekasole, and Xay Hill are sharing about own battles. Also bringing out a challenge to the listener to prepare to fight as well. It’s a laid back yet intense track because it’s all about rising against the pressure and chaos of life.
+**Ready For War** — Laid back melodies over a building beat, Jekasole, and Xay Hill are sharing about their own battles. Also bringing out a challenge to the listener to prepare to fight as well. It’s a laid back yet intense track because it’s all about rising against the pressure and chaos of life.
 
 **Rollie On My Wrist** — Acoustic guitars plucking over a trap beat.
 
@@ -50,6 +50,6 @@ I Need You Jesus – Hopeful piano riff to start this one, with a preacher sound
 
 **Worthy** — Intricate electric guitar lines lay on top of a muffled bed. The textures adapt and shift as the song goes. Xay is switching octaves in his vocal as the performance moves on. I’m digging it. “I’ve been through too much to prove that I’m worthy.”
 
-The concept of this album is dope. The idea of “Broken Nightmares” makes sense when you realize this album plays like a movie. He was really good at staying within the confines of the darkness, the chaos of life for a lion share of the project, but then those nightmares break when he gives himself to Jesus. With that being said, it’s sometimes hard to stay with an album for that long. The payoff is awesome, but in today’s climate people are going to, for the most part, pick and choose certain tracks from this album and only go to those.
+The concept of this album is dope. The idea of “Broken Nightmares” makes sense when you realize this album plays like a movie. He was really good at staying within the confines of the darkness, the chaos of life for a lion's share of the project, but then those nightmares break when he gives himself to Jesus. With that being said, it’s sometimes hard to stay with an album for that long. The payoff is awesome, but in today’s climate people are going to, for the most part, pick and choose certain tracks from this album and only go to those.
 
 He’s built a lot of these songs around hooks and earworm-like melodies that can really stay with you. There’s some really good stuff here. On the other hand, with most of these tracks built on hooks, I was missing depth in some areas. I think it could have been dope if he would have gotten a little deeper into the darkness so the payoff of the light at the end would have been more dramatic. I also felt that a lot of the beats and melodies sounded alike, and I could have used a lot more variety when it came to those two things. All in all, this is very solid. Nobody does it quite like Xay.

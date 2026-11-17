@@ -20,9 +20,7 @@ The first time I heard “adriansings” he wasn’t even on my radar. He submit
 
 **Up Or Down** — The instrumental on “Up or Down,” much like the previous tracks is fast paced, but it’s laced with an incredibly catchy melody. Everything is smooth and fits together beautifully. He jumps into the first verse with a versatile flow where he starts with triplets and ends up bobbing and weaving with some pauses and emphasis all in the right spots.
 
-“Still broke but I feel rich like my first name Buddy/yeah I got hashtags but no price tags and I’m still a slave to money/So where can I go when I’m all alone/Maybe the
-
-pills and maybe the blow/Hop in the whip and swerve on the low/Momma been praying I make it back home/…I’m on my grind like it’s my time/See em hate but I don’t mind cuz I’m alive/This flow is dead though/It’s fine I ride the wave until it’s mine/I gotta shine what you expect when it’s a part of me”
+“Still broke but I feel rich like my first name Buddy/yeah I got hashtags but no price tags and I’m still a slave to money/So where can I go when I’m all alone/Maybe the pills and maybe the blow/Hop in the whip and swerve on the low/Momma been praying I make it back home/…I’m on my grind like it’s my time/See em hate but I don’t mind cuz I’m alive/This flow is dead though/It’s fine I ride the wave until it’s mine/I gotta shine what you expect when it’s a part of me”
 
 Seriously the dude elevated on this flow right here. One of the best verses I’ve heard in a long minute from an execution perspective. Terrific.
 
@@ -36,9 +34,7 @@ Seriously the dude elevated on this flow right here. One of the best verses I’
 
 “I used to lose sleep in the dark nights/now I’m Batman wanna hide in it/A bounty hunter is never satisfied/It’s always one job to the next/That’s why I fly high in the bebop/Space cowboy like with the steps”
 
-It’s not a polished flow here, but it sounds nice, it’s down to earth and personable. I think he said his girlfriend left him when he wrote this one. So far, the “Odyssey” the
-
-album title is alluding to is this battle of doubt and hope, of peaks and valleys. He’s articulating it all quite well.
+It’s not a polished flow here, but it sounds nice, it’s down to earth and personable. I think he said his girlfriend left him when he wrote this one. So far, the “Odyssey” the album title is alluding to is this battle of doubt and hope, of peaks and valleys. He’s articulating it all quite well.
 
 **Let It Shine** — This instrumental at the beginning sounds like it belongs on a Jay-Z album. Adrian’s first verse here seems a bit forced. The start of it comes out of nowhere and then I didn’t feel like I could trust the switch to the melody at the end of the flow. The hook is solid, and Ruslan’s verse is great. This song gives me mixed feelings. I’d say it’s at the bar.
 

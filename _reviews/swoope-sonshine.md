@@ -11,7 +11,7 @@ summary: "Swoope released his album Sonshine this morning. This was heavily anti
 source_file: "Dope Beats drive"
 ---
 
-Swoope released his album Sonshine this morning. This was heavily anticipated and he did a great job creating hype and pushing towards its release with his “12 days of Sonshine” drops throughout Christmas season, and even the roll out of certain verses like TSNK and the three singles we heard in the last month. My first introduction to Swoope was his album “The Zoo,” and “Look and Live” is a track I still bump from time to time. At first look, “Sonshine” has a interesting cover art with Swoope sitting in a lawn chair wearing Adidas sliders. Is this an album that will have staying power? Time will tell, but let’s hit play and find out what we’re dealing with.
+Swoope released his album Sonshine this morning. This was heavily anticipated and he did a great job creating hype and pushing towards its release with his “12 days of Sonshine” drops throughout Christmas season, and even the roll out of certain verses like TSNK and the three singles we heard in the last month. My first introduction to Swoope was his album “The Zoo,” and “Look and Live” is a track I still bump from time to time. At first look, “Sonshine” has an interesting cover art with Swoope sitting in a lawn chair wearing Adidas sliders. Is this an album that will have staying power? Time will tell, but let’s hit play and find out what we’re dealing with.
 
 Track One – “Shine” starts with a token introduction voicemail. Swoope’s father left him a message telling him to “just shine.” Beat has a chill synth vibe that builds, and we’ve got a Choir that comes in on the hook. “Everybody with a dream don’t chase it/everybody with some talent don’t make it.” This song is about how everything is gonna be alright as long as the sun is shining.
 
@@ -21,7 +21,7 @@ Track One – “Shine” starts with a token introduction voicemail. Swoope’s
 
 I’ve always appreciated how Swoope cares about fluidity in his albums. It’s evident to me that he chooses to pull in elements from the next song at the end of the current song in order to make everything flow together. That’s exactly what happens here.
 
-On “Never Left” Natalie Lauren (fka Suzy Rock) brings in the theme in right away. The beat is full of brass and a lot of synth layers. I feel like the beats on this project tell a story. Swoope treats the beats with as much intentionality as he does his flows and how his performances grow, the beats are a performance in themselves. Beatbreaker brought some heat on this track, and that switch up in the back half of this song is bonkers. The flow here is on point too.
+On “Never Left” Natalie Lauren (fka Suzy Rock) brings in the theme right away. The beat is full of brass and a lot of synth layers. I feel like the beats on this project tell a story. Swoope treats the beats with as much intentionality as he does his flows and how his performances grow, the beats are a performance in themselves. Beatbreaker brought some heat on this track, and that switch up in the back half of this song is bonkers. The flow here is on point too.
 
 “I'm an Anomaly/Check the gold plaque/'Crae, tell 'em we still follow Jesus/They can hold that/I'm back like a chiropractor off of vacation/Couldn't come home 'til I covered all my bases/It's it's least I could do, like I'm working out of Avis/Eyes on Zion, unplug from the Matrix/Now I'm back”
 
@@ -41,6 +41,6 @@ During “Flex,” another quality I notice about Swoope is that while he is con
 
 Track 10 is named “Shining Down” and again is another track with a great mixture of singing and rapping where he doesn’t lose us by going for too long in either direction. To end this he pulls in a sample from his dad’s voicemail in the intro track.
 
-We close out the album with “All The Time.” The topic of God’s providence and His goodness are is a great one to send us on. Kevmo constructed a beat that is off the chain here. Swoope’s flow is very modern on this one, and this is probably my least favorite song on the album, but it’s still at the bar.
+We close out the album with “All The Time.” The topic of God’s providence and His goodness is a great one to send us on. Kevmo constructed a beat that is off the chain here. Swoope’s flow is very modern on this one, and this is probably my least favorite song on the album, but it’s still at the bar.
 
 It's been 4 years since we last heard from Swoope with "Because You Asked" and "Sinema" dropping that year. It's been 5 years since we've heard a solid project from him (WLAK), but it’s been 6 years since we’ve heard a Swoope solo release of this caliber. He's got everything working for him on this album. With next to no features he shows he can carry an entire project all on his own. Throughout “Sonshine” the creative direction is on point, the topics are fire, the fluidity, writing, and performances are all above the bar. This is a slam dunk album for me.

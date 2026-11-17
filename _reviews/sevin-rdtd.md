@@ -26,7 +26,7 @@ So far on this album we've had a lot of different sounds from Sevin. We began wi
 
 You don't care for us like we owe all/Who knew that a parent's love could be so wrong/Our condition's perilous but we hold on/We go wrong/Acting like these babies they don't need no home/Now we run the streets acting like a Deebo clone/Living a lie/Fittin' to die for something he don't own/Wake up!"
 
-Track 5 is entitled "Savage" and Datin comes in a the top. He moves back and forth between  hushed voice and full voice, a flow full of internal rhymes and superhero references. It's dope. Sevin's on the second verse and he twists up something fierce here. Man since he's been with GOM his production has improved incredibly. K. Allico's hook is great, and he deviates from it just before this last verse from Gemstones. It's great to hear Gem on a track. If you like rapid fire twisting on tracks, this is a track for you.
+Track 5 is entitled "Savage" and Datin comes in at the top. He moves back and forth between  hushed voice and full voice, a flow full of internal rhymes and superhero references. It's dope. Sevin's on the second verse and he twists up something fierce here. Man since he's been with GOM his production has improved incredibly. K. Allico's hook is great, and he deviates from it just before this last verse from Gemstones. It's great to hear Gem on a track. If you like rapid fire twisting on tracks, this is a track for you.
 
 **Ovadose** — The beat here has a strings sample, and some big bass. The hook is right at the top, and Sevin brings a verse full of similes and metaphors.
 
@@ -38,9 +38,9 @@ Yikes. Alright the sperm line is indeed a bit awkward. His lyrical content has a
 
 "I was told to die for the gang or my namesake/even though the game's fake I'm supposed to ride til the frame brakes/these cowards on these drugs they too high to aim straight/no California love there's too much pride in this dang state"
 
-Sevin's writing is on point here. He effortlessly keeps the same rhyme schemes for bars upon bars. The way he dictates his words in a percussive faction, and the accent he's able to use in places helps him stretch rhymes for days.
+Sevin's writing is on point here. He effortlessly keeps the same rhyme schemes for bars upon bars. The way he dictates his words in a percussive fashion, and the accent he's able to use in places helps him stretch rhymes for days.
 
-Sevin moves from that track into a song about women and his vow to put God above all, and even in front of his significant others. He shares about his vow to be celibate, his struggles with porn, and his desire for accountability. Wow this is an exceptionally challenging song for the Church, for believers, for anyone struggling with the strong holds of sexual sin. Mad props to Sevin for this one.
+Sevin moves from that track into a song about women and his vow to put God above all, and even in front of his significant others. He shares about his vow to be celibate, his struggles with porn, and his desire for accountability. Wow this is an exceptionally challenging song for the Church, for believers, for anyone struggling with the strongholds of sexual sin. Mad props to Sevin for this one.
 
 "Wounds of A Friend" begins with Sevin sharing his thoughts about how men are a bad representation of God's character. The first verse he is heavily intent on renouncing satan and talking about our victory over satan through Jesus Christ. I'm hearing the same theme being weaved through each song, the idea that "thou shalt have no other idols before me" is something referenced a lot throughout this project. The last verse on this song is off the chain.
 
@@ -48,7 +48,7 @@ Sevin moves from that track into a song about women and his vow to put God above
 
 You can say what you want about Sevin's choices with his lyrics, but I don't hear someone who is beating around the bush when it comes to sharing his testimony, telling people that Jesus loves them, and praising God. These last four tracks have been outstanding.
 
-Some really wet electric guitars are laid across a simple drum track on "Sin." The first verse tells a story of a girl who is enticing and encourages Sevin to compromise his beliefs. This woman is the embodiment of temptation. He name is "Sin." The rhyme schemes here in the second verse are bonkers.
+Some really wet electric guitars are laid across a simple drum track on "Sin." The first verse tells a story of a girl who is enticing and encourages Sevin to compromise his beliefs. This woman is the embodiment of temptation. Her name is "Sin." The rhyme schemes here in the second verse are bonkers.
 
 "And we roaming like we own the night/and I'm onward like I'm ADD for my baby's needs/she say she can pay me daily no maybe and gave me greed/she been around a cold minute now/we ten toes down no babies feet/she says we're in heaven but the sign keeps reading Hades street/my pride is thick and the chick i'm sliding with keeps supplying it/to the point I get violent with those to find my self entitlement/and I admit my heart don't beat the same way that it used to/I lose view in that voodoo that you do boo/but I choose you and can't lose you cuz you soothe me/but the movies got a cold twist cuz it's too true"
 
@@ -76,8 +76,8 @@ Chills. It's so earnest and in your face. Like I said at the top of this review,
 
 If there's any artist out right now who has consistently been putting out evangelical bars and keeping his themes and concepts Christ-centric, it's Sevin. While I'm not absolutely buggin' over this album, I will say it's remarkably solid and probably still in my top five of the year. I really felt like it started off slowly but he made up for it after that.
 
-There's 16 tracks here and with great features throughout as well as high quality production it really helps him out in the long run. Sevin's always gonna be an artist who's lyrical prowess will carry him for the most part. The unpredictability in his writing and the blatant Gospel message is so refreshing. His bars are full of the word of God and encouraging people to turn to Christ. He's sharing his testimony, sharing his struggles he even has now and in doing so he's able to shine light in the dark places.
+There's 16 tracks here and with great features throughout as well as high quality production it really helps him out in the long run. Sevin's always gonna be an artist whose lyrical prowess will carry him for the most part. The unpredictability in his writing and the blatant Gospel message is so refreshing. His bars are full of the word of God and encouraging people to turn to Christ. He's sharing his testimony, sharing his struggles he even has now and in doing so he's able to shine light in the dark places.
 
-Sevin's always held deep compassion to bring people out of the street life and into the presence of Jesus Christ. It oozes from him. I feel like his partnership with God Over Money has enhanced his craft the way other decisions in his career have not. In my opinion, it's an impressive though but this album shows that he's getting even better.
+Sevin's always held deep compassion to bring people out of the street life and into the presence of Jesus Christ. It oozes from him. I feel like his partnership with God Over Money has enhanced his craft the way other decisions in his career have not. In my opinion, it's an impressive thought but this album shows that he's getting even better.
 
 "Rather Die Than Deny" is the perfect slogan for an artist such as Sevin. He'll never be someone who sugar coats stuff, he's always going to be raw and unfiltered in his methods but will also always be unashamed in his love for Jesus. This is admirable work to say the least. Overall, RDTD is above the bar.

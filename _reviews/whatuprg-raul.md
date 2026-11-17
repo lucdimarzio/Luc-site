@@ -24,7 +24,7 @@ The bar exam is a sharing of notes from my true first listen to a project. I typ
 
 The beat progresses and WHATUPRG taps 1k Phew and Lecrae to assist as the track closes out.
 
-**Ni Aqui** — We move into a hypnotizing and catchy track. Pardon me if I miss out on some of this Spanish, but I think the translation means “neither here nor there” and RG seems fed up with girls who call him now when they never paid attention in the past. “Ni Aqui” is a strong track with a beautiful melody and music that enhances the RG’s performance. He’s absolutely shining here.
+**Ni Aqui** — We move into a hypnotizing and catchy track. Pardon me if I miss out on some of this Spanish, but I think the translation means “neither here nor there” and RG seems fed up with girls who call him now when they never paid attention in the past. “Ni Aqui” is a strong track with a beautiful melody and music that enhances RG’s performance. He’s absolutely shining here.
 
 JR is a small interlude, with one line that points to the heart. “I wish my dad was here.”
 
