@@ -1,0 +1,66 @@
+# Videos on The Work page, newest/featured first. The first one also shows in the home page ticker.
+# To add a video, copy a block, put it at the top, and change the details.
+# img: leave out to use the YouTube thumbnail. art: true for square cover art.
+- title: "Manger Throne"
+  kicker: "Live worship"
+  description: "Phil Wickham cover, Christmas 2025."
+  youtube: W-ElfJjebzY
+  alt: "Thumbnail for Manger Throne, live at Christmas"
+- title: "Speaklife Radio"
+  kicker: "Live worship"
+  description: "A live worship set I led for Speaklife Radio."
+  youtube: gWvatKtrnK4
+  alt: "Thumbnail for Speaklife Radio: Luc DiMarzio live worship set"
+- title: "Voice of God"
+  kicker: "Live worship &middot; Spoken word"
+  description: "A creative moment that weaves spoken word, a recorded performance, and a live performance together."
+  youtube: wpSTfHeAf18
+  alt: "Thumbnail for Voice of God"
+- title: "Live with Gil Gatsby"
+  kicker: "Live concert"
+  description: "A Speaklife concert with Gil Gatsby, part of the ONE80 Studio Concert Series."
+  youtube: egKEAiLB3zg
+  alt: "Thumbnail for Gil Gatsby and Luc DiMarzio live in the ONE80 Studio Concert Series"
+- title: "Kings Be Wise And Warned"
+  kicker: "Music video"
+  description: "A timeless tune about people replacing God's word with their own."
+  youtube: jlzbjk0wBjE
+  img: /assets/img/kbw_1.jpg
+  alt: "Thumbnail for Kings Be Wise And Warned"
+- title: "Refuge"
+  kicker: "Song"
+  description: "A song about being tired of striving for things on my own, and finding shelter in Christ."
+  youtube: IeOa_upnHPs
+  img: /assets/img/rfg_1.jpg
+  art: true
+  alt: "Artwork for Refuge"
+- title: "Easter Opener"
+  kicker: "Voiceover"
+  description: "He Made A Way."
+  youtube: x1u5Cb2ITz4
+  alt: "Thumbnail for Easter Opener"
+- title: "The GOAT"
+  kicker: "Voiceover"
+  description: "A spoken word voiceover I did for a video about The Greatest Of All Time."
+  youtube: TzAZ0iiVZZc
+  alt: "Thumbnail for The GOAT"
+- title: "Catch The Wind"
+  kicker: "Music video"
+  description: "Official music video."
+  youtube: Yj5DsOJBH_o
+  alt: "Thumbnail for Catch The Wind"
+- title: "Nobody's Perfect"
+  kicker: "Lyric video"
+  description: "Kinetic typography lyric video."
+  youtube: GFTMkcMbMaQ
+  alt: "Thumbnail for Nobody's Perfect"
+- title: "A Light"
+  kicker: "Spoken word"
+  description: "My most popular poem, a Christmas spoken word."
+  youtube: toGzHavfuxM
+  alt: "Thumbnail for A Light"
+- title: "So Will I"
+  kicker: "Acoustic cover"
+  description: "My acoustic take on Hillsong UNITED's \"So Will I (100 Billion X).\""
+  youtube: pybZSrds1Zo
+  alt: "Luc DiMarzio playing an acoustic cover of So Will I"

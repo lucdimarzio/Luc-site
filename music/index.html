@@ -14,126 +14,19 @@ description: "Songs, voiceover work, poetry, videos and releases from Luc DiMarz
    <section class="section">
     <h2 class="section-title">Featured Videos</h2>
     <div class="video-grid">
-      <a class="card video-card" href="https://youtu.be/W-ElfJjebzY" target="_blank" rel="noopener noreferrer">
-        <div class="video-thumb-wrap">
-          <img src="https://i.ytimg.com/vi/W-ElfJjebzY/maxresdefault.jpg" alt="Thumbnail for Manger Throne, live at Christmas" />
+      {% for v in site.data.videos %}
+      {% capture thumb %}{% if v.img %}{{ v.img }}{% else %}https://i.ytimg.com/vi/{{ v.youtube }}/maxresdefault.jpg{% endif %}{% endcapture %}
+      <a class="card video-card" href="https://youtu.be/{{ v.youtube }}" target="_blank" rel="noopener noreferrer">
+        <div class="video-thumb-wrap{% if v.art %} is-art{% endif %}"{% if v.art %} style="--art:url('{{ thumb }}')"{% endif %}>
+          <img src="{{ thumb }}" alt="{{ v.alt | default: v.title | escape }}"{% if forloop.index > 3 %} loading="lazy"{% endif %} />
           <span class="play-badge" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span>
         </div>
-        <div class="kicker">Live worship</div>
-        <h3>Manger Throne</h3>
-        <p>Phil Wickham cover, Christmas 2025.</p>
+        <div class="kicker">{{ v.kicker }}</div>
+        <h3>{{ v.title }}</h3>
+        <p>{{ v.description }}</p>
         <span class="link-arrow">Watch on YouTube &nearr;</span>
       </a>
-      <a class="card video-card" href="https://youtu.be/gWvatKtrnK4" target="_blank" rel="noopener noreferrer">
-        <div class="video-thumb-wrap">
-          <img src="https://i.ytimg.com/vi/gWvatKtrnK4/maxresdefault.jpg" alt="Thumbnail for Speaklife Radio: Luc DiMarzio live worship set" />
-          <span class="play-badge" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span>
-        </div>
-        <div class="kicker">Live worship</div>
-        <h3>Speaklife Radio</h3>
-        <p>A live worship set I led for Speaklife Radio.</p>
-        <span class="link-arrow">Watch on YouTube &nearr;</span>
-      </a>
-      <a class="card video-card" href="https://youtu.be/wpSTfHeAf18" target="_blank" rel="noopener noreferrer">
-        <div class="video-thumb-wrap">
-          <img src="https://i.ytimg.com/vi/wpSTfHeAf18/maxresdefault.jpg" alt="Thumbnail for Voice of God" />
-          <span class="play-badge" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span>
-        </div>
-        <div class="kicker">Live worship &middot; Spoken word</div>
-        <h3>Voice of God</h3>
-        <p>A creative moment that weaves spoken word, a recorded performance, and a live performance together.</p>
-        <span class="link-arrow">Watch on YouTube &nearr;</span>
-      </a>
-      <a class="card video-card" href="https://www.youtube.com/watch?v=egKEAiLB3zg" target="_blank" rel="noopener noreferrer">
-        <div class="video-thumb-wrap">
-          <img src="https://i.ytimg.com/vi/egKEAiLB3zg/maxresdefault.jpg" alt="Thumbnail for Gil Gatsby and Luc DiMarzio live in the ONE80 Studio Concert Series" loading="lazy" />
-          <span class="play-badge" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span>
-        </div>
-        <div class="kicker">Live concert</div>
-        <h3>Live with Gil Gatsby</h3>
-        <p>A Speaklife concert with Gil Gatsby, part of the ONE80 Studio Concert Series.</p>
-        <span class="link-arrow">Watch on YouTube &nearr;</span>
-      </a>
-      <a class="card video-card" href="https://youtu.be/jlzbjk0wBjE" target="_blank" rel="noopener noreferrer">
-        <div class="video-thumb-wrap">
-          <img src="/assets/img/kbw_1.jpg" alt="Thumbnail for Kings Be Wise And Warned" loading="lazy" />
-          <span class="play-badge" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span>
-        </div>
-        <div class="kicker">Music video</div>
-        <h3>Kings Be Wise And Warned</h3>
-        <p>A timeless tune about people replacing God's word with their own.</p>
-        <span class="link-arrow">Watch on YouTube &nearr;</span>
-      </a>
-      <a class="card video-card" href="https://youtu.be/IeOa_upnHPs" target="_blank" rel="noopener noreferrer">
-        <div class="video-thumb-wrap is-art" style="--art:url('/assets/img/rfg_1.jpg')">
-          <img src="/assets/img/rfg_1.jpg" alt="Artwork for Refuge" loading="lazy" />
-          <span class="play-badge" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span>
-        </div>
-        <div class="kicker">Song</div>
-        <h3>Refuge</h3>
-        <p>A song about being tired of striving for things on my own, and finding shelter in Christ.</p>
-        <span class="link-arrow">Watch on YouTube &nearr;</span>
-      </a>
-      <a class="card video-card" href="https://youtu.be/x1u5Cb2ITz4" target="_blank" rel="noopener noreferrer">
-        <div class="video-thumb-wrap">
-          <img src="https://i.ytimg.com/vi/x1u5Cb2ITz4/maxresdefault.jpg" alt="Thumbnail for Easter Opener" loading="lazy" />
-          <span class="play-badge" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span>
-        </div>
-        <div class="kicker">Voiceover</div>
-        <h3>Easter Opener</h3>
-        <p>He Made A Way.</p>
-        <span class="link-arrow">Watch on YouTube &nearr;</span>
-      </a>
-      <a class="card video-card" href="https://youtu.be/TzAZ0iiVZZc" target="_blank" rel="noopener noreferrer">
-        <div class="video-thumb-wrap">
-          <img src="https://i.ytimg.com/vi/TzAZ0iiVZZc/maxresdefault.jpg" alt="Thumbnail for The GOAT" loading="lazy" />
-          <span class="play-badge" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span>
-        </div>
-        <div class="kicker">Voiceover</div>
-        <h3>The GOAT</h3>
-        <p>A spoken word voiceover I did for a video about The Greatest Of All Time.</p>
-        <span class="link-arrow">Watch on YouTube &nearr;</span>
-      </a>
-      <a class="card video-card" href="https://youtu.be/Yj5DsOJBH_o" target="_blank" rel="noopener noreferrer">
-        <div class="video-thumb-wrap">
-          <img src="https://i.ytimg.com/vi/Yj5DsOJBH_o/maxresdefault.jpg" alt="Thumbnail for Catch The Wind" loading="lazy" />
-          <span class="play-badge" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span>
-        </div>
-        <div class="kicker">Music video</div>
-        <h3>Catch The Wind</h3>
-        <p>Official music video.</p>
-        <span class="link-arrow">Watch on YouTube &nearr;</span>
-      </a>
-      <a class="card video-card" href="https://youtu.be/GFTMkcMbMaQ" target="_blank" rel="noopener noreferrer">
-        <div class="video-thumb-wrap">
-          <img src="https://i.ytimg.com/vi/GFTMkcMbMaQ/maxresdefault.jpg" alt="Thumbnail for Nobody's Perfect" loading="lazy" />
-          <span class="play-badge" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span>
-        </div>
-        <div class="kicker">Lyric video</div>
-        <h3>Nobody's Perfect</h3>
-        <p>Kinetic typography lyric video.</p>
-        <span class="link-arrow">Watch on YouTube &nearr;</span>
-      </a>
-      <a class="card video-card" href="https://youtu.be/toGzHavfuxM" target="_blank" rel="noopener noreferrer">
-        <div class="video-thumb-wrap">
-          <img src="https://i.ytimg.com/vi/toGzHavfuxM/maxresdefault.jpg" alt="Thumbnail for A Light" loading="lazy" />
-          <span class="play-badge" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span>
-        </div>
-        <div class="kicker">Spoken word</div>
-        <h3>A Light</h3>
-        <p>My most popular poem, a Christmas spoken word.</p>
-        <span class="link-arrow">Watch on YouTube &nearr;</span>
-      </a>
-      <a class="card video-card" href="https://youtu.be/pybZSrds1Zo" target="_blank" rel="noopener noreferrer">
-        <div class="video-thumb-wrap">
-          <img src="https://i.ytimg.com/vi/pybZSrds1Zo/maxresdefault.jpg" alt="Luc DiMarzio playing an acoustic cover of So Will I" loading="lazy" />
-          <span class="play-badge" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span>
-        </div>
-        <div class="kicker">Acoustic cover</div>
-        <h3>So Will I</h3>
-        <p>My acoustic take on Hillsong UNITED's "So Will I (100 Billion X)."</p>
-        <span class="link-arrow">Watch on YouTube &nearr;</span>
-      </a>
+      {% endfor %}
     </div>
   </section>
 

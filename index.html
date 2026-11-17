@@ -15,24 +15,39 @@ nav: home
         <h1 class="edge-display"><span>Luc</span> <span>DiMarzio</span></h1>
         <p class="home-tag">Creator. Curator. Leader.</p>
         <div class="home-actions">
-          <a class="pill pill-strong" href="/writing/reviews/">Read the Bar Exams</a>
-          <a class="pill" href="/submit/?type=music">Submit Music</a>
+          <a class="pill pill-strong" href="/music/">See The Work</a>
+          <a class="pill" href="/writing/reviews/">Read the Bar Exams</a>
         </div>
       </div>
     </section>
   </div>
 
-{% assign latest = site.reviews | sort: "date" | reverse %}
-<div class="edge-ticker" aria-label="Latest Bar Exams">
+{% assign latest_reviews = site.reviews | sort: "date" | reverse %}
+{% assign v1 = site.data.videos[0] %}{% assign v2 = site.data.videos[1] %}
+{% assign r1 = latest_reviews[0] %}{% assign r2 = latest_reviews[1] %}
+{% assign iv = site.data.interviews[0] %}{% assign ar = site.data.articles[0] %}
+{% assign tr = site.trainings | sort: "order" | first %}
+{% capture ticker_items %}
+<a href="/music/"><span class="tick-tag">New video</span>{{ v1.title }}</a>
+<a href="{{ r1.url }}"><span class="tick-tag">Bar Exam</span>{{ r1.title }} <em>— {{ r1.artist }}</em></a>
+{% assign iv_parts = iv.title | split: " [" %}{% assign iv_who = iv_parts[1] | replace: "Interview]", "" | replace: "]", "" | strip %}
+<a href="{{ iv.url }}" target="_blank" rel="noopener noreferrer"><span class="tick-tag">Interview</span>{{ iv_parts[0] }}{% if iv_who != "" %} <em>— {{ iv_who }}</em>{% endif %}</a>
+<a href="/playlists/"><span class="tick-tag">On repeat</span>Ear to the Streets Certified</a>
+<a href="{{ tr.url }}"><span class="tick-tag">Training</span>{{ tr.title }}</a>
+<a href="/music/"><span class="tick-tag">Video</span>{{ v2.title }}</a>
+<a href="{{ ar.url }}"{% unless ar.local %} target="_blank" rel="noopener noreferrer"{% endunless %}><span class="tick-tag">Article</span>{{ ar.title }}</a>
+<a href="{{ r2.url }}"><span class="tick-tag">Bar Exam</span>{{ r2.title }} <em>— {{ r2.artist }}</em></a>
+{% endcapture %}
+<div class="edge-ticker" aria-label="Latest from Luc">
   <div class="edge-ticker-track">
-    {% for copy in (1..2) %}
-    <div class="edge-ticker-group"{% if copy == 2 %} aria-hidden="true"{% endif %}>
-      <span class="edge-ticker-head">Latest Bar Exams</span>
-      {% for r in latest limit: 8 %}
-      <a href="{{ r.url }}"{% if copy == 2 %} tabindex="-1"{% endif %}>{{ r.title }} <em>— {{ r.artist }}</em></a>
-      {% endfor %}
+    <div class="edge-ticker-group">
+      <span class="edge-ticker-head">Latest</span>
+      {{ ticker_items }}
     </div>
-    {% endfor %}
+    <div class="edge-ticker-group" aria-hidden="true">
+      <span class="edge-ticker-head">Latest</span>
+      {{ ticker_items | replace: '<a href', '<a tabindex="-1" href' }}
+    </div>
   </div>
 </div>
 
