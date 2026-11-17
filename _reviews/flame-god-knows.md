@@ -7,13 +7,13 @@ date: 2018-03-04
 date_approximate: false
 rating: at
 rating_label: "At the Bar"
-summary: "It’s been three years since we last heard an full album from Flame. (!!!) The veteran from St. Louis, Missouri is back with “God Knows” and I couldn’t be more thrilled. The trailer for this album had a tight concept,…"
+summary: "It’s been three years since we last heard a full album from Flame. (!!!) The veteran from St. Louis, Missouri is back with “God Knows” and I couldn’t be more thrilled. The trailer for this album had a tight concept,…"
 source_file: "newh2o.com (Wayback Machine)"
 published_in: "newh2o"
 published_url: "https://web.archive.org/web/2020/https://newh2o.com/bar-exam-flame-god-knows-album/"
 ---
 
-It’s been three years since we last heard an full album from **Flame**. (!!!) The veteran from St. Louis, Missouri is back with “God Knows” and I couldn’t be more thrilled. The trailer for this album had a tight concept, and I readily anticipated it’s drop. The concept of the album seems to be simple, that God ultimately knows His plan for us, and we’re left to do our best with the life we’re given.
+It’s been three years since we last heard a full album from **Flame**. (!!!) The veteran from St. Louis, Missouri is back with “God Knows” and I couldn’t be more thrilled. The trailer for this album had a tight concept, and I readily anticipated its drop. The concept of the album seems to be simple, that God ultimately knows His plan for us, and we’re left to do our best with the life we’re given.
 
 Following that thread, the project starts off with** Flame** talking to his GPS system in his car. The first track is a skit, then we launch into “Swimming with Sharks.” Big horns in the instrumental, growing in intensity as the song progresses. The concept present here is about how the industry will eat you alive if you let it. *“Swimming with the blood thirsty fame seeking vicious/cold hearted selfish minded sneaky opportunist” ***Flame**absolutely kills this performance.
 

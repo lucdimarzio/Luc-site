@@ -11,27 +11,51 @@ description: Album reviews, interviews and lists from Luc DiMarzio — including
 
 <main class="container">
   <section class="hero">
-    <div class="kicker">Lead</div>
+    <div class="kicker">Writing</div>
     <h1>Writing</h1>
     <p class="subhead">Album reviews, interviews and lists about hip-hop, faith and the people making the music. My work has appeared on Rapzilla, NewH2O and Midnight Donuts.</p>
   </section>
 
+  {% assign latest_review = reviews | first %}
+  {% assign latest_interview = site.data.interviews | first %}
+  {% assign latest_article = site.data.articles | first %}
+  {% assign first_training = site.trainings | sort: "order" | first %}
   <section class="section">
-    <h2 class="section-title">Featured</h2>
-    <div class="grid">
-    {% for r in reviews %}{% if r.featured %}
-    <article class="card feature-card">
-      <div class="kicker">{% if r.published_in %}{{ r.published_in }} &middot; {% endif %}{{ r.date | date: "%B %Y" }}</div>
-      <h3>Bar Exam: {{ r.title }}</h3>
-      <p class="review-artist">{{ r.artist }} <span>&middot; {{ r.format }}</span></p>
-      <span class="rating rating-{{ r.rating }}">{{ r.rating_label }}</span>
-      <p>{{ r.summary }}</p>
-      <div class="links">
-        {% if r.published_url %}<a class="pill pill-strong" href="{{ r.published_url }}" target="_blank" rel="noopener noreferrer">Read on {{ r.published_in }}</a>{% endif %}
-        {% if r.full_text != false %}<a class="pill" href="{{ r.url }}">Read the review</a>{% endif %}
-      </div>
-    </article>
-    {% endif %}{% endfor %}
+    <h2 class="section-title">Latest</h2>
+    <div class="grid latest-grid">
+      <a class="card latest-card" href="{{ latest_review.url }}">
+        {% if latest_review.cover %}<img class="latest-media latest-cover" src="{{ latest_review.cover }}" alt="Cover of {{ latest_review.title | escape }}" loading="lazy" />{% endif %}
+        <div class="latest-body">
+          <div class="kicker">Bar Exam &middot; {{ latest_review.date | date: "%b %Y" }}</div>
+          <h3>{{ latest_review.title }}</h3>
+          <p class="review-artist">{{ latest_review.artist }} <span>&middot; {{ latest_review.format }}</span></p>
+          <span class="rating rating-{{ latest_review.rating }}">{{ latest_review.rating_label }}</span>
+          <span class="link-arrow">Read the review &rarr;</span>
+        </div>
+      </a>
+      <a class="card latest-card" href="{{ latest_interview.url }}" target="_blank" rel="noopener noreferrer">
+        <div class="latest-body">
+          <div class="kicker">Interview &middot; {{ latest_interview.outlet }} &middot; {{ latest_interview.date | date: "%b %Y" }}</div>
+          <h3>{{ latest_interview.title }}</h3>
+          <span class="link-arrow">Read on {{ latest_interview.outlet }} &nearr;</span>
+        </div>
+      </a>
+      <a class="card latest-card" href="{{ latest_article.url }}"{% unless latest_article.local %} target="_blank" rel="noopener noreferrer"{% endunless %}>
+        <div class="latest-body">
+          <div class="kicker">Article &middot; {{ latest_article.outlet }} &middot; {{ latest_article.date | date: "%b %Y" }}</div>
+          <h3>{{ latest_article.title }}</h3>
+          <span class="link-arrow">Read it {% if latest_article.local %}&rarr;{% else %}on {{ latest_article.outlet }} &nearr;{% endif %}</span>
+        </div>
+      </a>
+      <a class="card latest-card" href="{{ first_training.url }}">
+        <img class="latest-media" src="/assets/img/trainings/{{ first_training.slides }}/01.jpg" alt="" loading="lazy" />
+        <div class="latest-body">
+          <div class="kicker">Leadership &middot; Team Training</div>
+          <h3>{{ first_training.title }}</h3>
+          <p>{{ first_training.summary }}</p>
+          <span class="link-arrow">See the training &rarr;</span>
+        </div>
+      </a>
     </div>
   </section>
 
@@ -40,7 +64,7 @@ description: Album reviews, interviews and lists from Luc DiMarzio — including
       <div>
         <div class="kicker">Album Reviews</div>
         <h2>The Bar Exam</h2>
-        <p>A Bar Exam is my notes from my true first listen to a project. I share in-depth thoughts on anything from flows, rhymes and beats to creative direction, track placement and concepts. Then I rate it on a three-point scale.</p>
+        <p>Each Bar Exam captures my notes from a true first listen: flows, rhymes, beats, creative direction, track placement and concepts. Then I give the project a verdict on a three-point scale.</p>
         <div class="stats">
           <div><strong>{{ site.reviews.size }}</strong><span>reviews</span></div>
           <div><strong>{{ oldest.date | date: "%Y" }}</strong><span>first exam</span></div>

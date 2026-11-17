@@ -1,18 +1,18 @@
 ---
 layout: default
-title: Submit
+title: Work With Me
 nav: submit
 description: Submit music for a Bar Exam review, or reach out to Luc DiMarzio about leadership coaching, vocal coaching or team training.
 ---
 <main class="container">
   <section class="hero">
-    <div class="kicker">Submit</div>
+    <div class="kicker">Work With Me</div>
     <h1>Let's work together.</h1>
     <p class="subhead">Got a project you want me to hear? Want help with your team, your leadership or your voice? Fill this out and I'll get back to you.</p>
   </section>
 
   <section class="section submit-grid">
-    <form class="card submit-form" action="{{ site.submit_form_endpoint }}" method="POST">
+    <form class="card submit-form" id="contact-form" action="{{ site.submit_form_endpoint }}" method="POST">
       <input type="hidden" name="_subject" value="New submission from lucdimarzio.com" />
       <p class="hp" aria-hidden="true"><label>Leave this empty <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" /></label></p>
 
@@ -64,13 +64,6 @@ description: Submit music for a Bar Exam review, or reach out to Luc DiMarzio ab
         </div>
       </div>
 
-      <div class="team-fields" hidden>
-        <label class="field">
-          <span>Church or organization</span>
-          <input type="text" name="organization" />
-        </label>
-      </div>
-
       <label class="field">
         <span>Tell me more</span>
         <textarea name="message" rows="6" required></textarea>
@@ -92,19 +85,48 @@ description: Submit music for a Bar Exam review, or reach out to Luc DiMarzio ab
       </div>
     </aside>
   </section>
+
+  <section class="section" id="vocal-coaching">
+    <h2 class="section-title">Vocal coaching</h2>
+    <div class="card vocal-card">
+      <div>
+        <p class="vocal-lead">Want to grow as a singer? I'd love to help.</p>
+        <p>I'm a classically trained singer, and I've been leading worship since 2006. Lessons are for individual singers as well as people on a worship team. We'll work on taking care of your voice, technique, and singing with confidence, whether you're on a stage on Sunday or just want to sound better in the car.</p>
+      </div>
+      <div class="vocal-actions">
+        <a class="pill pill-strong" href="?type=vocal#contact-form" data-pick="Vocal coaching">Ask about lessons &rarr;</a>
+        <a class="link-arrow" href="/writing/leadership/vocalist-on-a-worship-team/">Read my training for vocalists &rarr;</a>
+      </div>
+    </div>
+  </section>
 </main>
 
 <script>
 (function () {
   var type = document.getElementById('request-type');
   var music = document.querySelector('.music-fields');
-  var team = document.querySelector('.team-fields');
   function update() {
     var v = type.value;
     music.hidden = !/review|Luc's Picks|Interview/.test(v);
-    team.hidden = !/coaching|training/i.test(v);
   }
   type.addEventListener('change', update);
+  var pick = { vocal: 'Vocal coaching', music: 'Album or EP review (Bar Exam)' };
+  function choose(label) {
+    for (var i = 0; i < type.options.length; i++) {
+      if (type.options[i].text === label) { type.selectedIndex = i; break; }
+    }
+    update();
+  }
+  var q = new URLSearchParams(location.search).get('type');
+  if (pick[q]) choose(pick[q]);
+  document.querySelectorAll('[data-pick]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      choose(a.dataset.pick);
+      document.getElementById('contact-form').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      type.focus({ preventScroll: true });
+    });
+  });
   update();
 })();
 </script>

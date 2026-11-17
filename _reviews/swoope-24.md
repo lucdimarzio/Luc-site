@@ -7,12 +7,12 @@ date: 2021-07-10
 date_approximate: false
 rating: at
 rating_label: "At the Bar"
-summary: "To this day, Swoope’s 2018 album, Sonshine still gets constant play. When he’s definitely had bangers present on previous albums, I felt like that was his most complete album to date. Swoope is an artist who seems to…"
+summary: "To this day, Swoope’s 2018 album, Sonshine still gets constant play. While his earlier albums had bangers, I felt like Sonshine was his most complete album to date. Swoope is an artist who seems to…"
 published_in: "Rapzilla"
 published_url: "https://rapzilla.com/2021-07-bar-exam-swoope-24-first-listen-review/"
 ---
 
-To this day, Swoope’s 2018 album, Sonshine still gets constant play. When he’s definitely had bangers present on previous albums, I felt like that was his most complete album to date. Swoope is an artist who seems to make his albums one complete thought, by weaving transitions between each song and keeping a fluid concept throughout. His production, writing, and performances are always top-notch. I’m looking forward to seeing what’s in his bag with 24.
+To this day, Swoope’s 2018 album, Sonshine still gets constant play. While his earlier albums had bangers, I felt like Sonshine was his most complete album to date. Swoope is an artist who seems to make his albums one complete thought, by weaving transitions between each song and keeping a fluid concept throughout. His production, writing, and performances are always top-notch. I’m looking forward to seeing what’s in his bag with 24.
 
 For those of you unfamiliar with my bar exams, I am sharing all of my notes from my true first listen to the project. I provide in-depth thoughts and commentary on anything from flows, rhymes, beats, creative direction, track placement, and concepts.
 

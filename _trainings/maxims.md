@@ -4,7 +4,7 @@ subtitle: "Shedding the myths of what it means to be a creative leader."
 order: 1
 slides: maxims
 slide_count: 7
-summary: "The seven statements I want everyone on my worship team to carry. They're the lens for everything else we do."
+summary: "The six maxims I want everyone on my worship team to carry. They're the lens for everything else we do."
 ---
 
 These are the maxims I want every person on my team to carry. Everything else we train on comes back to these.

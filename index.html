@@ -2,8 +2,8 @@
 layout: default
 nav: home
 ---
-<main class="container edge">
-
+<main class="edge">
+  <div class="container">
     <section class="home-hero edge-hero">
       <img src="/assets/img/luc-stage.jpg" alt="Luc DiMarzio performing on stage" class="home-hero-img" />
       <div class="edge-hero-meta" aria-hidden="true">
@@ -16,11 +16,11 @@ nav: home
         <p class="home-tag">Creator. Curator. Leader.</p>
         <div class="home-actions">
           <a class="pill pill-strong" href="/writing/reviews/">Read the Bar Exams</a>
-          <a class="pill" href="/submit/">Submit Music</a>
+          <a class="pill" href="/submit/?type=music">Submit Music</a>
         </div>
       </div>
     </section>
-</main>
+  </div>
 
 {% assign latest = site.reviews | sort: "date" | reverse %}
 <div class="edge-ticker" aria-label="Latest Bar Exams">
@@ -36,7 +36,7 @@ nav: home
   </div>
 </div>
 
-<main class="container edge">
+  <div class="container">
 
     <section class="section edge-box edge-reveal">
       <div class="edge-box-bar"><span>[002]</span><span>Now Playing</span><span class="edge-dot" aria-hidden="true"></span></div>
@@ -75,11 +75,11 @@ nav: home
           <p>Playlists of bangers that meet you where you are.</p>
           <span class="link-arrow">Playlists &rarr;</span>
         </a>
-        <a href="/writing/" class="edge-pillar">
+        <a href="/writing/leadership/" class="edge-pillar">
           <span class="edge-num">03</span>
           <h3 class="edge-display">Lead</h3>
-          <p>Articles, Interviews, Lists, and Conversations.</p>
-          <span class="link-arrow">Writing &rarr;</span>
+          <p>Team trainings on worship, discipleship and building a healthy creative culture.</p>
+          <span class="link-arrow">Leadership &rarr;</span>
         </a>
       </div>
     </section>
@@ -88,9 +88,10 @@ nav: home
       <div class="edge-cta">
         <div class="edge-label">[004] Submissions open</div>
         <h2 class="edge-display">Got a project you want me to hear?</h2>
-        <p>Send me your album, EP or single for a Bar Exam. Want help with your team, your leadership or your voice? Reach out about coaching too.</p>
-        <a class="edge-cta-btn" href="/submit/">Submit &rarr;</a>
+        <p>Send an album or EP for a Bar Exam, or a single for Luc's Picks. Want help with your team, your leadership or your voice? Reach out about coaching too.</p>
+        <a class="edge-cta-btn" href="/submit/?type=music">Submit Music &rarr;</a>
       </div>
     </section>
+  </div>
 </main>
 
