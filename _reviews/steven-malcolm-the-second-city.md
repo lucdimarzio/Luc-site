@@ -1,6 +1,7 @@
 ---
 title: "The Second City"
 artist: "Steven Malcolm"
+cover: /assets/img/covers/steven-malcolm-the-second-city.jpg
 format: Album
 date: 2019-02-25
 date_approximate: false

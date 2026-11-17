@@ -1,6 +1,7 @@
 ---
 title: "All Is True"
 artist: "Steven Malcolm"
+cover: /assets/img/covers/steven-malcolm-all-is-true.jpg
 format: EP
 date: 2021-07-23
 date_approximate: false

@@ -1,6 +1,7 @@
 ---
 title: "Vet"
 artist: "Da' T.R.U.T.H."
+cover: /assets/img/covers/da-truth-vet.jpg
 format: EP
 date: 2018-11-09
 date_approximate: false

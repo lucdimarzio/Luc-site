@@ -1,6 +1,7 @@
 ---
 title: "Crescendo"
 artist: "Jackie Hill Perry"
+cover: /assets/img/covers/jackie-hill-perry-crescendo.jpg
 format: Album
 date: 2018-06-01
 date_approximate: true

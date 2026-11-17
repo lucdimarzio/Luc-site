@@ -1,6 +1,7 @@
 ---
 title: "Never Fold"
 artist: "Tedashii"
+cover: /assets/img/covers/tedashii-never-fold.jpg
 format: Album
 date: 2019-03-09
 date_approximate: false

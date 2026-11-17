@@ -1,6 +1,7 @@
 ---
 title: "Underrated"
 artist: "Jovon Dangerfield"
+cover: /assets/img/covers/jovon-dangerfield-underrated.jpg
 format: Album
 date: 2019-01-17
 date_approximate: false

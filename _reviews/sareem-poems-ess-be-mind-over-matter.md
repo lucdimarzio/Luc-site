@@ -1,6 +1,7 @@
 ---
 title: "Mind Over Matter"
 artist: "Sareem Poems & Ess Be"
+cover: /assets/img/covers/sareem-poems-ess-be-mind-over-matter.jpg
 format: Album
 date: 2018-06-18
 date_approximate: true

@@ -1,6 +1,7 @@
 ---
 title: "Open Season"
 artist: "Nomis"
+cover: /assets/img/covers/nomis-open-season.jpg
 format: Single
 date: 2019-06-07
 date_approximate: false

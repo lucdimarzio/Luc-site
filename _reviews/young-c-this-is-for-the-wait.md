@@ -1,6 +1,7 @@
 ---
 title: "This Is For The Wait"
 artist: "Young C"
+cover: /assets/img/covers/young-c-this-is-for-the-wait.jpg
 format: EP
 date: 2019-02-04
 date_approximate: false

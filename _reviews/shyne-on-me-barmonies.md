@@ -1,6 +1,7 @@
 ---
 title: "Barmonies: The Long Fall"
 artist: "Shyne On Me"
+cover: /assets/img/covers/shyne-on-me-barmonies.jpg
 format: Mixtape
 date: 2018-01-23
 date_approximate: true

@@ -1,6 +1,7 @@
 ---
 title: "Matters of the Heart"
 artist: "Jay Sanon"
+cover: /assets/img/covers/jay-sanon-matters-of-the-heart.jpg
 format: Album
 date: 2019-05-17
 date_approximate: false

@@ -1,6 +1,7 @@
 ---
 title: "RAUL"
 artist: "WHATUPRG"
+cover: /assets/img/covers/whatuprg-raul.jpg
 format: Album
 date: 2019-03-01
 date_approximate: false

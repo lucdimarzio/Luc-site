@@ -1,6 +1,7 @@
 ---
 title: "God's Goon"
 artist: "BRM"
+cover: /assets/img/covers/brm-gods-goon.jpg
 format: Album
 date: 2019-07-27
 date_approximate: false

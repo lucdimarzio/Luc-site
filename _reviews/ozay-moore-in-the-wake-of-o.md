@@ -1,6 +1,7 @@
 ---
 title: "In the Wake of O"
 artist: "Ozay Moore"
+cover: /assets/img/covers/ozay-moore-in-the-wake-of-o.jpg
 format: Album
 date: 2018-06-01
 date_approximate: true

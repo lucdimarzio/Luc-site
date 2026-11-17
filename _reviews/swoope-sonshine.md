@@ -1,6 +1,7 @@
 ---
 title: "Sonshine"
 artist: "Swoope"
+cover: /assets/img/covers/swoope-sonshine.jpg
 format: Album
 date: 2018-02-02
 date_approximate: true

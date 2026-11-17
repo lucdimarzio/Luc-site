@@ -1,6 +1,7 @@
 ---
 title: "Speak Louder with Action"
 artist: "Anothen"
+cover: /assets/img/covers/anothen-speak-louder-with-action.jpg
 format: Album
 date: 2018-06-01
 date_approximate: true

@@ -1,6 +1,7 @@
 ---
 title: "Light Work"
 artist: "Bizzle"
+cover: /assets/img/covers/bizzle-light-work.jpg
 format: EP
 date: 2018-06-01
 date_approximate: true

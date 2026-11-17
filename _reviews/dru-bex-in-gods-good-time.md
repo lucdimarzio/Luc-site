@@ -1,6 +1,7 @@
 ---
 title: "In God's Good Time"
 artist: "Dru Bex"
+cover: /assets/img/covers/dru-bex-in-gods-good-time.jpg
 format: Album
 date: 2018-06-01
 date_approximate: true

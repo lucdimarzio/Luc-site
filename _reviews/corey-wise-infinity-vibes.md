@@ -1,6 +1,7 @@
 ---
 title: "Infinity Vibes"
 artist: "Corey Wise"
+cover: /assets/img/covers/corey-wise-infinity-vibes.jpg
 format: Album
 date: 2018-01-11
 date_approximate: false

@@ -1,6 +1,7 @@
 ---
 title: "When Brothers Talk"
 artist: "Shiwan & Ty Young"
+cover: /assets/img/covers/shiwan-ty-young-when-brothers-talk.jpg
 format: Album
 date: 2018-08-03
 date_approximate: true

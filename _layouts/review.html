@@ -6,7 +6,8 @@ nav: writing
   <article class="review">
     <a class="back-link" href="/writing/reviews/">&larr; All reviews</a>
 
-    <div class="review-head">
+    <div class="review-head{% if page.cover %} has-cover{% endif %}">
+      <div class="review-head-text">
       <div class="kicker">Bar Exam &middot; {% if page.date_approximate %}{{ page.date | date: "%Y" }}{% else %}{{ page.date | date: "%B %-d, %Y" }}{% endif %}</div>
       <h1>{{ page.title }}</h1>
       <p class="review-artist">{{ page.artist }} <span>&middot; {{ page.format }}</span></p>
@@ -14,6 +15,8 @@ nav: writing
       {% if page.published_url %}
       <p class="review-source">Originally published in <a href="{{ page.published_url }}" target="_blank" rel="noopener noreferrer">{{ page.published_in }}</a></p>
       {% endif %}
+      </div>
+      {% if page.cover %}<img class="review-cover" src="{{ page.cover }}" alt="Cover of {{ page.title | escape }} by {{ page.artist | escape }}" width="200" height="200" />{% endif %}
     </div>
 
     <div class="prose">

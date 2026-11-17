@@ -1,6 +1,7 @@
 ---
 title: "Into the Night"
 artist: "Social Club"
+cover: /assets/img/covers/social-club-into-the-night.jpg
 format: Album
 date: 2018-06-01
 date_approximate: true

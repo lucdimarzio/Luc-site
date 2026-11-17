@@ -1,6 +1,7 @@
 ---
 title: "Problematic"
 artist: "KHAM"
+cover: /assets/img/covers/kham-problematic.jpg
 format: Album
 date: 2020-10-30
 date_approximate: false

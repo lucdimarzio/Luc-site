@@ -1,6 +1,7 @@
 ---
 title: "Breaking Ground"
 artist: "Hnst-T"
+cover: /assets/img/covers/hnst-t-breaking-ground.jpg
 format: EP
 date: 2018-06-01
 date_approximate: true

@@ -1,6 +1,7 @@
 ---
 title: "Hands Are Made for Working"
 artist: "Guvna B"
+cover: /assets/img/covers/guvna-b-hands-are-made-for-working.jpg
 format: Album
 date: 2018-06-01
 date_approximate: true

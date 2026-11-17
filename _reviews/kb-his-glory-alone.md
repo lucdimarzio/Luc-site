@@ -1,6 +1,7 @@
 ---
 title: "His Glory Alone"
 artist: "KB"
+cover: /assets/img/covers/kb-his-glory-alone.jpg
 format: Album
 date: 2020-09-25
 date_approximate: false

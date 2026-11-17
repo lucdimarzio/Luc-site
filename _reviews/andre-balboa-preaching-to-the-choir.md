@@ -1,6 +1,7 @@
 ---
 title: "Preaching to the Choir"
 artist: "Andre Balboa"
+cover: /assets/img/covers/andre-balboa-preaching-to-the-choir.jpg
 format: Album
 date: 2018-06-01
 date_approximate: true

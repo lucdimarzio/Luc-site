@@ -1,6 +1,7 @@
 ---
 title: "Soul's Acrylic"
 artist: "A.I. the Anomaly"
+cover: /assets/img/covers/a-i-the-anomaly-souls-acrylic.jpg
 format: Album
 date: 2021-01-29
 date_approximate: false

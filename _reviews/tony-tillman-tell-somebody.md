@@ -1,6 +1,7 @@
 ---
 title: "Tell Somebody"
 artist: "Tony Tillman"
+cover: /assets/img/covers/tony-tillman-tell-somebody.jpg
 format: Single
 date: 2018-01-01
 date_approximate: true

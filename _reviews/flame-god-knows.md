@@ -1,6 +1,7 @@
 ---
 title: "God Knows"
 artist: "FLAME"
+cover: /assets/img/covers/flame-god-knows.jpg
 format: Album
 date: 2018-03-04
 date_approximate: false

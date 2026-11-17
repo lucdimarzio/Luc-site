@@ -1,6 +1,7 @@
 ---
 title: "Broken Nightmares"
 artist: "Xay Hill"
+cover: /assets/img/covers/xay-hill-broken-nightmares.jpg
 format: Album
 date: 2020-10-31
 date_approximate: false

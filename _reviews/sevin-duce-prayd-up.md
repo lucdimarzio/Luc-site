@@ -1,6 +1,7 @@
 ---
 title: "Pray'd Up"
 artist: "Sevin Duce"
+cover: /assets/img/covers/sevin-duce-prayd-up.jpg
 format: Album
 date: 2018-08-24
 date_approximate: true

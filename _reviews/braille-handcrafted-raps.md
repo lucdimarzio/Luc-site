@@ -1,6 +1,7 @@
 ---
 title: "Handcrafted Raps"
 artist: "Braille"
+cover: /assets/img/covers/braille-handcrafted-raps.jpg
 format: Album
 date: 2025-09-02
 date_approximate: false

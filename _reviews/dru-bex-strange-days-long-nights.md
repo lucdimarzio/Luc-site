@@ -1,6 +1,7 @@
 ---
 title: "Strange Days, Long Nights"
 artist: "Dru Bex"
+cover: /assets/img/covers/dru-bex-strange-days-long-nights.jpg
 format: Album
 date: 2019-03-25
 date_approximate: false

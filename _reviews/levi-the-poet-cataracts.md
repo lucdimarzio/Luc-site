@@ -1,6 +1,7 @@
 ---
 title: "Cataracts"
 artist: "Levi the Poet"
+cover: /assets/img/covers/levi-the-poet-cataracts.jpg
 format: Album
 date: 2018-06-01
 date_approximate: true

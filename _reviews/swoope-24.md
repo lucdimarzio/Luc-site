@@ -1,6 +1,7 @@
 ---
 title: "24"
 artist: "Swoope"
+cover: /assets/img/covers/swoope-24.jpg
 format: Album
 date: 2021-07-10
 date_approximate: false

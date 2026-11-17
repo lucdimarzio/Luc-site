@@ -1,6 +1,7 @@
 ---
 title: "Makana"
 artist: "Illtalian"
+cover: /assets/img/covers/illtalian-makana.jpg
 format: Album
 date: 2018-06-01
 date_approximate: true

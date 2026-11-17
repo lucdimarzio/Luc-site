@@ -1,6 +1,7 @@
 ---
 title: "Sindy V Victoria"
 artist: "Dru Bex"
+cover: /assets/img/covers/dru-bex-sindy-v-victoria.jpg
 format: Album
 date: 2021-10-29
 date_approximate: false

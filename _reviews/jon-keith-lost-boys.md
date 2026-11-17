@@ -1,6 +1,7 @@
 ---
 title: "Lost Boys"
 artist: "Jon Keith"
+cover: /assets/img/covers/jon-keith-lost-boys.jpg
 format: Album
 date: 2018-06-01
 date_approximate: true

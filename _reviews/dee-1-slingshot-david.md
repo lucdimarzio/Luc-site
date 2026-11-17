@@ -1,6 +1,7 @@
 ---
 title: "Slingshot David"
 artist: "Dee 1"
+cover: /assets/img/covers/dee-1-slingshot-david.jpg
 format: Album
 date: 2017-11-10
 date_approximate: false

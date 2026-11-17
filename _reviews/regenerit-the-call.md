@@ -1,6 +1,7 @@
 ---
 title: "The Call"
 artist: "Regenerit"
+cover: /assets/img/covers/regenerit-the-call.jpg
 format: EP
 date: 2018-06-01
 date_approximate: true

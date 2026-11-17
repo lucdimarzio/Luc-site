@@ -1,6 +1,7 @@
 ---
 title: "4EVA MOBN"
 artist: "Sevin"
+cover: /assets/img/covers/sevin-4eva-mobn.jpg
 format: Album
 date: 2018-06-01
 date_approximate: true

@@ -1,6 +1,7 @@
 ---
 title: "The Golden Lining"
 artist: "King Chav"
+cover: /assets/img/covers/king-chav-the-golden-lining.jpg
 format: Album
 date: 2018-09-05
 date_approximate: true

@@ -1,6 +1,7 @@
 ---
 title: "Sola Gratia"
 artist: "Justus"
+cover: /assets/img/covers/justus-sola-gratia.jpg
 format: Album
 date: 2018-06-01
 date_approximate: true

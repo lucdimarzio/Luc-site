@@ -1,6 +1,7 @@
 ---
 title: "Indie Jones III"
 artist: "Ruslan"
+cover: /assets/img/covers/ruslan-indie-jones-iii.jpg
 format: Album
 date: 2019-06-03
 date_approximate: false

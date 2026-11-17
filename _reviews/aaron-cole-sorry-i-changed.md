@@ -1,6 +1,7 @@
 ---
 title: "SORRY, I CHANGED"
 artist: "Aaron Cole"
+cover: /assets/img/covers/aaron-cole-sorry-i-changed.jpg
 format: Album
 date: 2024-07-01
 date_approximate: false

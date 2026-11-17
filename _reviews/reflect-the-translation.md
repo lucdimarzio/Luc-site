@@ -1,6 +1,7 @@
 ---
 title: "The Translation"
 artist: "Reflect"
+cover: /assets/img/covers/reflect-the-translation.jpg
 format: Album
 date: 2018-03-20
 date_approximate: true

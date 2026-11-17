@@ -1,6 +1,7 @@
 ---
 title: "The Love Won't Last Long"
 artist: "Taelor Gray"
+cover: /assets/img/covers/taelor-gray-the-love-wont-last-long.jpg
 format: Album
 date: 2018-07-17
 date_approximate: true

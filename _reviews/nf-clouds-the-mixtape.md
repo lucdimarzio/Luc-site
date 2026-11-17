@@ -1,6 +1,7 @@
 ---
 title: "Clouds (The Mixtape)"
 artist: "NF"
+cover: /assets/img/covers/nf-clouds-the-mixtape.jpg
 format: Mixtape
 date: 2021-03-26
 date_approximate: false

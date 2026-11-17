@@ -1,6 +1,7 @@
 ---
 title: "Sad People Make Dope Music"
 artist: "Mogli the Iceburg"
+cover: /assets/img/covers/mogli-the-iceburg-sad-people-make-dope-music.jpg
 format: EP
 date: 2018-04-13
 date_approximate: true

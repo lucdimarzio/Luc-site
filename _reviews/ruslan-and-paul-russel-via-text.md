@@ -1,6 +1,7 @@
 ---
 title: "Via Text"
 artist: "Ruslan & Paul Russel"
+cover: /assets/img/covers/ruslan-and-paul-russel-via-text.jpg
 format: Album
 date: 2018-06-01
 date_approximate: true

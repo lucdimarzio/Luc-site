@@ -1,6 +1,7 @@
 ---
 title: "Restoration"
 artist: "Lecrae"
+cover: /assets/img/covers/lecrae-restoration.jpg
 format: Album
 date: 2020-08-21
 date_approximate: false

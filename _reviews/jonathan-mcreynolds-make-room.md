@@ -1,6 +1,7 @@
 ---
 title: "Make Room"
 artist: "Jonathan McReynolds"
+cover: /assets/img/covers/jonathan-mcreynolds-make-room.jpg
 format: Album
 date: 2018-06-01
 date_approximate: true

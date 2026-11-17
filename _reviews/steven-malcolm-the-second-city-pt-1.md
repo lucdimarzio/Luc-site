@@ -1,6 +1,7 @@
 ---
 title: "The Second City: Part 1"
 artist: "Steven Malcolm"
+cover: /assets/img/covers/steven-malcolm-the-second-city-pt-1.jpg
 format: EP
 date: 2018-01-26
 date_approximate: true

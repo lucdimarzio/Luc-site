@@ -1,6 +1,7 @@
 ---
 title: "Streets Signed Me"
 artist: "Rockstar JT"
+cover: /assets/img/covers/rockstar-jt-streets-signed-me.jpg
 format: Mixtape
 date: 2018-02-16
 date_approximate: false

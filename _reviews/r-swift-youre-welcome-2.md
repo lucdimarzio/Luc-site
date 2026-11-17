@@ -1,6 +1,7 @@
 ---
 title: "You're Welcome 2"
 artist: "R-Swift"
+cover: /assets/img/covers/r-swift-youre-welcome-2.jpg
 format: Album
 date: 2019-05-31
 date_approximate: false

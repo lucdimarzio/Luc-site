@@ -1,6 +1,7 @@
 ---
 title: "Beauty In The Struggle"
 artist: "Dusty Marshall"
+cover: /assets/img/covers/dusty-marshall-beauty-in-the-struggle.jpg
 format: Album
 date: 2018-02-07
 date_approximate: true

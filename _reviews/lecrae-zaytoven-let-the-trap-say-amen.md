@@ -1,6 +1,7 @@
 ---
 title: "Let The Trap Say Amen"
 artist: "Lecrae & Zaytoven"
+cover: /assets/img/covers/lecrae-zaytoven-let-the-trap-say-amen.jpg
 format: Album
 date: 2018-06-21
 date_approximate: true

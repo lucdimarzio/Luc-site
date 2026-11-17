@@ -1,6 +1,7 @@
 ---
 title: "Indie Jones II"
 artist: "Ruslan"
+cover: /assets/img/covers/ruslan-indie-jones-ii.jpg
 format: Mixtape
 date: 2018-01-18
 date_approximate: true

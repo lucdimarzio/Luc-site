@@ -1,6 +1,7 @@
 ---
 title: "What's Understood 2"
 artist: "1K Phew"
+cover: /assets/img/covers/1k-phew-whats-understood-2.jpg
 format: Album
 date: 2019-11-12
 date_approximate: false

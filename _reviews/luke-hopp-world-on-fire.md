@@ -1,6 +1,7 @@
 ---
 title: "World On Fire"
 artist: "Luke Hopp"
+cover: /assets/img/covers/luke-hopp-world-on-fire.jpg
 format: Album
 date: 2024-09-02
 date_approximate: false

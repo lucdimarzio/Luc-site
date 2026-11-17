@@ -1,6 +1,7 @@
 ---
 title: "Let's Talk About Our Feelings"
 artist: "Mogli the Iceburg"
+cover: /assets/img/covers/mogli-the-iceburg-lets-talk-about-our-feelings.jpg
 format: Album
 date: 2018-06-01
 date_approximate: true

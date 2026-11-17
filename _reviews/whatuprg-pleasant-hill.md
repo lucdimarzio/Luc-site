@@ -1,6 +1,7 @@
 ---
 title: "Pleasant Hill"
 artist: "WHATUPRG"
+cover: /assets/img/covers/whatuprg-pleasant-hill.jpg
 format: Album
 date: 2018-06-01
 date_approximate: true

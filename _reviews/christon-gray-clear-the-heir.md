@@ -1,6 +1,7 @@
 ---
 title: "Clear the Heir"
 artist: "Christon Gray"
+cover: /assets/img/covers/christon-gray-clear-the-heir.jpg
 format: Album
 date: 2018-06-01
 date_approximate: true

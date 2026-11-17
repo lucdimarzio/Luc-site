@@ -1,6 +1,7 @@
 ---
 title: "1997"
 artist: "Ian Kenville"
+cover: /assets/img/covers/ian-kenville-1997.jpg
 format: Album
 date: 2019-03-15
 date_approximate: false

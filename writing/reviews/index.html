@@ -36,8 +36,9 @@ description: Every Bar Exam — Luc DiMarzio's first-listen album reviews of Chr
           <ol class="review-list">
         {% assign current_year = y %}
       {% endif %}
-            <li class="review-row" data-rating="{{ r.rating }}" data-search="{{ r.artist | downcase | escape }} {{ r.title | downcase | escape }}">
+            <li class="review-row" data-rating="{{ r.rating }}" data-search="{{ r.artist | downcase | escape }} {{ r.title | downcase | escape }}"{% if r.cover %} data-cover="{{ r.cover }}"{% endif %}>
               <a href="{{ r.url }}">
+                {% if r.cover %}<img class="row-cover" src="{{ r.cover }}" alt="" loading="lazy" width="56" height="56" />{% else %}<span class="row-cover row-cover--blank" aria-hidden="true">{{ r.artist | slice: 0 }}</span>{% endif %}
                 <span class="row-main">
                   <span class="row-album">{{ r.title }}</span>
                   <span class="row-artist">{{ r.artist }} &middot; {{ r.format }}</span>
@@ -50,6 +51,7 @@ description: Every Bar Exam — Luc DiMarzio's first-listen album reviews of Chr
 
     <p class="empty" hidden>No reviews match that search.</p>
   </section>
+  <div class="cover-float" aria-hidden="true"><img alt="" /></div>
 </main>
 
 <script>
@@ -90,5 +92,35 @@ description: Every Bar Exam — Luc DiMarzio's first-listen album reviews of Chr
     });
   });
   input.addEventListener('input', apply);
+
+  // Album cover follows the mouse over the list (mouse devices only)
+  var fl = document.querySelector('.cover-float');
+  var img = fl.querySelector('img');
+  if (!matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+  var still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var mx = 0, my = 0, x = 0, y = 0, tilt = 0, running = false, on = false;
+  function loop() {
+    var dx = mx - x;
+    x += still ? dx : dx * 0.18;
+    y += still ? (my - y) : (my - y) * 0.18;
+    tilt += ((still ? 0 : Math.max(-14, Math.min(14, dx * 0.25))) - tilt) * 0.15;
+    fl.style.transform = 'translate3d(' + (x + 28) + 'px,' + (y - 110) + 'px,0) rotate(' + tilt.toFixed(2) + 'deg)';
+    if (on || Math.abs(dx) > 0.5) { requestAnimationFrame(loop); } else { running = false; }
+  }
+  document.addEventListener('mousemove', function (e) {
+    mx = e.clientX; my = e.clientY;
+    if (!running) { running = true; if (!on) { x = mx; y = my; } requestAnimationFrame(loop); }
+  });
+  rows.forEach(function (r) {
+    var src = r.dataset.cover;
+    if (!src) return;
+    r.addEventListener('mouseenter', function () {
+      if (img.getAttribute('src') !== src) img.src = src;
+      on = true; fl.classList.add('is-on');
+      if (!running) { running = true; requestAnimationFrame(loop); }
+    });
+    r.addEventListener('mouseleave', function () { on = false; fl.classList.remove('is-on'); });
+  });
+  document.body.classList.add('has-cover-float');
 })();
 </script>

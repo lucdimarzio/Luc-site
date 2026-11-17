@@ -18,13 +18,20 @@
   <meta property="og:title" content="{{ share_title | escape }}" />
   <meta property="og:description" content="{{ share_desc | escape }}" />
   <meta property="og:url" content="{{ share_url }}" />
-  <meta property="og:image" content="{{ page.image | default: site.share_image | prepend: site.url }}" />
+  {%- assign share_img = page.image | default: page.cover | default: site.share_image -%}
+  <meta property="og:image" content="{{ share_img | prepend: site.url }}" />
+  {%- if page.cover and page.image == nil %}
+  <meta property="og:image:width" content="600" />
+  <meta property="og:image:height" content="600" />
+  <meta name="twitter:card" content="summary" />
+  {%- else %}
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
+  {%- endif %}
   <meta name="twitter:title" content="{{ share_title | escape }}" />
   <meta name="twitter:description" content="{{ share_desc | escape }}" />
-  <meta name="twitter:image" content="{{ page.image | default: site.share_image | prepend: site.url }}" />
+  <meta name="twitter:image" content="{{ share_img | prepend: site.url }}" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" />
@@ -42,13 +49,22 @@
 
   <script>
     (function () {
-      if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-      var els = document.querySelectorAll('.edge-reveal, main > .section, main > section.section');
+      if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      var els = Array.prototype.slice.call(document.querySelectorAll('.edge-reveal, main > .section'));
       document.documentElement.classList.add('edge-js');
-      var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); } });
-      }, { threshold: 0, rootMargin: '0px 0px -8% 0px' });
-      els.forEach(function (el) { el.classList.add('edge-reveal'); io.observe(el); });
+      els.forEach(function (el) { el.classList.add('edge-reveal'); });
+      function check() {
+        var line = window.innerHeight * 0.92;
+        els = els.filter(function (el) {
+          if (el.getBoundingClientRect().top < line) { el.classList.add('is-in'); return false; }
+          return true;
+        });
+        if (!els.length) { removeEventListener('scroll', check); removeEventListener('resize', check); }
+      }
+      addEventListener('scroll', check, { passive: true });
+      addEventListener('resize', check);
+      setTimeout(check, 60);
+      setTimeout(check, 700);
     })();
   </script>
 

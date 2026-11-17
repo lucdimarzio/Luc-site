@@ -1,6 +1,7 @@
 ---
 title: "Rhodes To Rome"
 artist: "Nomis"
+cover: /assets/img/covers/nomis-rhodes-to-rome.jpg
 format: Album
 date: 2018-06-25
 date_approximate: true

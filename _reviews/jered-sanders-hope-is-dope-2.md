@@ -1,6 +1,7 @@
 ---
 title: "Hope Is Dope 2"
 artist: "Jered Sanders"
+cover: /assets/img/covers/jered-sanders-hope-is-dope-2.jpg
 format: Album
 date: 2020-01-17
 date_approximate: false

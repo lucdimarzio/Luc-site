@@ -1,6 +1,7 @@
 ---
 title: "I: The Arrow"
 artist: "Andy Mineo"
+cover: /assets/img/covers/andy-mineo-i-the-arrow.jpg
 format: EP
 date: 2018-06-01
 date_approximate: true

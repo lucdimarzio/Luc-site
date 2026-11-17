@@ -1,6 +1,7 @@
 ---
 title: "Any Last Words?"
 artist: "Torey D'Shaun & Kevi Morse"
+cover: /assets/img/covers/torey-dshaun-and-kevi-morse-any-last-words.jpg
 format: EP
 date: 2018-06-01
 date_approximate: true

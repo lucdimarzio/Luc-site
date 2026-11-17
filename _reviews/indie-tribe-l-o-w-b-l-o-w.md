@@ -1,6 +1,7 @@
 ---
 title: "L O W B L O W"
 artist: "indie tribe"
+cover: /assets/img/covers/indie-tribe-l-o-w-b-l-o-w.jpg
 format: Album
 date: 2024-02-06
 date_approximate: false

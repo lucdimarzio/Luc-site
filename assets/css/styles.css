@@ -934,3 +934,29 @@ header{ border-bottom-color:var(--line); }
   .hero{ padding:40px 0 28px; margin-bottom:36px; }
 }
 h1{ overflow-wrap:break-word; }
+
+/* Bar Exam archive: album covers */
+.review-row a{ justify-content:flex-start; }
+.review-row .row-main{ flex:1; }
+.row-cover{ width:56px; height:56px; flex:none; object-fit:cover; border:1px solid var(--line); background:#000; }
+.row-cover--blank{ display:grid; place-items:center; font-family:var(--display); font-size:24px; text-transform:uppercase; color:var(--accent-hi); background:var(--accent-soft); }
+.has-cover-float .row-cover{ display:none; }
+.cover-float{
+  position:fixed; left:0; top:0; z-index:60; width:220px; height:220px; pointer-events:none;
+  opacity:0; scale:.85; transition:opacity .18s ease, scale .25s cubic-bezier(.2,.8,.2,1);
+  border:1px solid var(--accent); box-shadow:10px 10px 0 var(--accent), 0 30px 60px rgba(0,0,0,.6); background:#000;
+}
+.cover-float.is-on{ opacity:1; scale:1; }
+.cover-float img{ width:100%; height:100%; object-fit:cover; display:block; }
+@media (max-width: 720px){
+  .row-cover{ width:48px; height:48px; }
+  .review-row a{ gap:12px; padding:12px 4px; }
+}
+
+/* Single review: cover next to the title */
+.review-head.has-cover{ display:grid; grid-template-columns:minmax(0,1fr) 200px; gap:28px; align-items:end; }
+.review-cover{ width:200px; height:200px; object-fit:cover; border:1px solid var(--line); box-shadow:8px 8px 0 var(--accent); }
+@media (max-width: 720px){
+  .review-head.has-cover{ grid-template-columns:1fr; gap:20px; }
+  .review-cover{ width:160px; height:160px; order:-1; }
+}

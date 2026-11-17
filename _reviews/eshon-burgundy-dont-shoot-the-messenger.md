@@ -1,6 +1,7 @@
 ---
 title: "Don't Shoot the Messenger"
 artist: "Eshon Burgundy"
+cover: /assets/img/covers/eshon-burgundy-dont-shoot-the-messenger.jpg
 format: Album
 date: 2021-01-12
 date_approximate: false
