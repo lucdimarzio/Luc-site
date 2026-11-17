@@ -7,7 +7,6 @@ description: Luc DiMarzio is a worship pastor, musician and hip-hop writer who's
 {% assign year_now = site.time | date: "%Y" | plus: 0 %}
 {% assign ministry_years = year_now | minus: 2006 %}
 {% assign hiphop_years = year_now | minus: 1988 %}
-{% assign above_total = 0 %}{% for r in site.reviews %}{% if r.rating == "above" %}{% assign above_total = above_total | plus: 1 %}{% endif %}{% endfor %}
 
 <main class="container">
   <section class="hero about-hero">
@@ -46,9 +45,10 @@ description: Luc DiMarzio is a worship pastor, musician and hip-hop writer who's
         <h3>A few things about me</h3>
         <ul class="facts">
           <li>Went to the Grammy Awards in 2022 and <a href="https://rapzilla.com/2022-04-christian-artist-grammy-awards/" target="_blank" rel="noopener noreferrer">wrote about it</a></li>
-          <li>Wrote two journals: one for couples, and a Bible-in-a-year journal. <a href="/store/">See them in the store</a></li>
-          <li>Curates six Christian hip-hop <a href="/playlists/">playlists</a></li>
-          <li>Has given {{ above_total }} projects an Above the Bar</li>
+          <li>Curates Christian hip-hop <a href="/playlists/">playlists</a> on Spotify, Apple Music and Pandora</li>
+          <li>Best concert: John Mayer&rsquo;s Continuum Tour at Red Rocks Amphitheatre in Golden, CO</li>
+          <li>Desert island album: <em>The Exodus</em> by Gospel Gangstaz</li>
+          <li>Used to yo-yo a lot</li>
         </ul>
       </div>
     </aside>
