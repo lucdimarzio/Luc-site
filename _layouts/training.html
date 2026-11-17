@@ -15,16 +15,28 @@ nav: writing
     {% if page.slides %}
     <section class="deck" aria-label="Slides">
       <div class="deck-track" tabindex="0">
-        {% for i in (1..page.slide_count) %}
+        {% assign shown = page.preview_slides | default: page.slide_count %}
+        {% assign more = page.slide_count | minus: shown %}
+        {% for i in (1..shown) %}
         {% capture n %}{% if i < 10 %}0{% endif %}{{ i }}{% endcapture %}
         <figure class="deck-slide">
           <img src="/assets/img/trainings/{{ page.slides }}/{{ n }}.jpg" alt="{{ page.title }}, slide {{ i }}" width="1600" height="900" {% if i > 1 %}loading="lazy"{% endif %} />
         </figure>
         {% endfor %}
+        {% if more > 0 %}
+        <figure class="deck-slide deck-more">
+          <div>
+            <div class="kicker">Preview &middot; {{ shown }} of {{ page.slide_count }} slides</div>
+            <p class="deck-more-title">There's more where that came from.</p>
+            <p>The full training is {{ page.slide_count }} slides. I'd love to walk your team through it.</p>
+            <a class="pill pill-strong" href="/submit/?type=training">Bring it to your team &rarr;</a>
+          </div>
+        </figure>
+        {% endif %}
       </div>
       <div class="deck-controls">
         <button type="button" class="filter deck-prev" aria-label="Previous slide">&larr;</button>
-        <span class="deck-count"><span class="deck-current">1</span> / {{ page.slide_count }}</span>
+        <span class="deck-count"><span class="deck-current">1</span> / {% if more > 0 %}{{ shown | plus: 1 }}{% else %}{{ page.slide_count }}{% endif %}</span>
         <button type="button" class="filter deck-next" aria-label="Next slide">&rarr;</button>
       </div>
     </section>
@@ -33,6 +45,13 @@ nav: writing
     <div class="prose training-notes">
       {{ content }}
     </div>
+
+    <aside class="card training-invite">
+      <div class="kicker">Work With Me</div>
+      <h2>Want this training for your team?</h2>
+      <p>I'd love to walk your worship team, staff or creative team through it, and talk about what it looks like where you are.</p>
+      <a class="pill pill-strong" href="/submit/?type=training">Let's talk &rarr;</a>
+    </aside>
   </article>
 </main>
 

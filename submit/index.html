@@ -110,7 +110,7 @@ description: Submit music for a Bar Exam review, or reach out to Luc DiMarzio ab
     music.hidden = !/review|Luc's Picks|Interview/.test(v);
   }
   type.addEventListener('change', update);
-  var pick = { vocal: 'Vocal coaching', music: 'Album or EP review (Bar Exam)' };
+  var pick = { vocal: 'Vocal coaching', music: 'Album or EP review (Bar Exam)', training: 'Worship team training' };
   function choose(label) {
     for (var i = 0; i < type.options.length; i++) {
       if (type.options[i].text === label) { type.selectedIndex = i; break; }
