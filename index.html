@@ -24,8 +24,9 @@ nav: home
 
 {% assign latest_reviews = site.reviews | sort: "date" | reverse %}
 {% assign v1 = site.data.videos[0] %}{% assign v2 = site.data.videos[1] %}
-{% assign r1 = latest_reviews[0] %}{% assign r2 = latest_reviews[1] %}
-{% assign iv = site.data.interviews[0] %}{% assign ar = site.data.articles[0] %}
+{% assign r1 = nil %}{% assign r2 = nil %}
+{% for r in latest_reviews %}{% if r.rating != "below" %}{% if r1 == nil %}{% assign r1 = r %}{% elsif r2 == nil %}{% assign r2 = r %}{% endif %}{% endif %}{% endfor %}
+{% assign iv = site.data.interviews[0] %}{% assign features = site.data.articles | where: "kind", "feature" %}{% assign ar = features[0] %}
 {% assign tr = site.trainings | sort: "order" | first %}
 {% capture ticker_items %}
 <a href="/music/"><span class="tick-tag">New video</span>{{ v1.title }}</a>
