@@ -762,3 +762,119 @@ a.card:hover{ border-color:var(--accent); opacity:1; }
 .cta.is-current{ box-shadow:0 0 0 2px var(--bg), 0 0 0 4px var(--accent); }
 @media (max-width: 720px){ .menu a{ padding:8px 6.5px; } }
 @media (max-width: 360px){ .menu a{ padding:8px 5px; font-size:12px; } }
+
+/* ===========================================================
+   Edge look (home page for now; turned on with `edge: true`)
+   =========================================================== */
+:root{
+  --display:"Anton","Impact","Arial Narrow Bold",sans-serif;
+  --mono:"Space Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --line:rgba(242,243,245,.16);
+}
+.edge-display{ font-family:var(--display); font-weight:400; text-transform:uppercase; letter-spacing:.5px; line-height:.9; }
+.edge-label{ font-family:var(--mono); font-size:12px; letter-spacing:1.5px; text-transform:uppercase; color:var(--accent-hi); }
+
+/* Film grain over the whole page */
+.edge-grain{
+  position:fixed; inset:-50%; z-index:100; pointer-events:none; opacity:.07;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation:edge-grain 1s steps(4) infinite;
+}
+@keyframes edge-grain{
+  0%{ transform:translate(0,0); } 25%{ transform:translate(-3%,2%); }
+  50%{ transform:translate(2%,-3%); } 75%{ transform:translate(-2%,-1%); } 100%{ transform:translate(0,0); }
+}
+
+/* Hero: square, lined, huge name */
+.edge .edge-hero{ border-radius:0; border:1px solid var(--line); margin:28px 0 0; min-height:600px; }
+.edge-hero-meta{
+  position:absolute; z-index:2; top:0; left:0; right:0; display:flex; justify-content:space-between;
+  padding:12px 16px; border-bottom:1px solid var(--line); background:rgba(11,12,16,.45); backdrop-filter:blur(6px);
+  font-family:var(--mono); font-size:11px; letter-spacing:1.5px; text-transform:uppercase; color:var(--muted);
+}
+.edge .home-hero-text{ max-width:none; padding:44px 40px; }
+.edge .home-hero h1{ font-size:clamp(76px, 13vw, 168px); margin:14px 0 14px; }
+.edge .home-hero h1 span{ display:inline-block; }
+.edge .home-hero h1 span:last-child{ color:transparent; -webkit-text-stroke:2px var(--text); }
+.edge .home-tag{ font-family:var(--mono); font-size:15px; letter-spacing:1px; text-transform:uppercase; color:var(--muted); }
+
+/* Square buttons on the edge page */
+.edge .pill, .edge-cta-btn{ border-radius:0; }
+
+/* Ticker: full-width cyan band */
+.edge-ticker{
+  margin:0 0 64px; background:var(--accent); color:var(--accent-ink); overflow:hidden;
+  border-top:1px solid var(--accent-hi); border-bottom:1px solid var(--accent-hi);
+}
+.edge-ticker-track{ display:flex; width:max-content; animation:edge-ticker 60s linear infinite; }
+.edge-ticker:hover .edge-ticker-track{ animation-play-state:paused; }
+.edge-ticker-group{ display:flex; align-items:center; flex:0 0 auto; }
+.edge-ticker-head, .edge-ticker a{ font-family:var(--display); text-transform:uppercase; font-size:22px; letter-spacing:.5px; padding:12px 0; white-space:nowrap; }
+.edge-ticker-head{ background:var(--accent-ink); color:var(--accent-hi); padding:12px 18px; }
+.edge-ticker a{ color:var(--accent-ink); padding-left:22px; }
+.edge-ticker a::after{ content:"✦"; margin-left:22px; font-family:var(--font); font-size:16px; vertical-align:2px; }
+.edge-ticker a em{ font-style:normal; opacity:.6; }
+.edge-ticker a:hover{ opacity:1; text-decoration:underline; text-decoration-thickness:2px; text-underline-offset:4px; }
+@keyframes edge-ticker{ from{ transform:translateX(0); } to{ transform:translateX(-50%); } }
+
+/* Lined boxes */
+.edge-box{ border:1px solid var(--line); padding:0; }
+.edge-box .home-now{ padding:32px; }
+.edge-box-bar{
+  display:flex; align-items:center; gap:14px; padding:10px 16px; border-bottom:1px solid var(--line);
+  font-family:var(--mono); font-size:11px; letter-spacing:1.5px; text-transform:uppercase; color:var(--muted);
+}
+.edge-box-bar span:first-child{ color:var(--accent-hi); }
+.edge-box-bar--solo{ border:1px solid var(--line); border-bottom:0; }
+.edge-dot{ margin-left:auto; width:8px; height:8px; border-radius:50%; background:var(--accent-hi); box-shadow:0 0 0 0 rgba(34,211,238,.6); animation:edge-pulse 1.6s infinite; }
+@keyframes edge-pulse{ 70%{ box-shadow:0 0 0 10px rgba(34,211,238,0); } 100%{ box-shadow:0 0 0 0 rgba(34,211,238,0); } }
+.edge .edge-h2{ font-size:clamp(40px, 5vw, 60px); margin:0 0 14px; }
+.edge .home-now .home-now-text{ display:flex; flex-direction:column; }
+.edge .link-arrow{ font-family:var(--mono); font-size:12px; letter-spacing:1px; text-transform:uppercase; }
+
+/* Create / Curate / Lead: shared grid lines, cyan fill on hover */
+.edge-pillars{ display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); border:1px solid var(--line); }
+.edge-pillar{ position:relative; display:flex; flex-direction:column; gap:10px; padding:26px 24px 24px; color:var(--text); transition:background .25s, color .25s; }
+.edge-pillar + .edge-pillar{ border-left:1px solid var(--line); }
+.edge-pillar h3{ font-size:clamp(48px, 6vw, 72px); margin:0; }
+.edge-pillar p{ margin:0 0 6px; color:var(--muted); font-size:14px; flex:1; transition:color .25s; }
+.edge-num{ font-family:var(--mono); font-size:12px; color:var(--accent-hi); }
+.edge-pillar:hover{ background:var(--accent); color:var(--accent-ink); opacity:1; }
+.edge-pillar:hover p, .edge-pillar:hover .edge-num, .edge-pillar:hover .link-arrow{ color:var(--accent-ink); }
+
+/* Submit: big cyan block */
+.edge-cta{
+  background:var(--accent); color:var(--accent-ink); padding:48px 40px;
+  background-image:repeating-linear-gradient(135deg, rgba(3,25,29,.10) 0 1px, transparent 1px 12px);
+}
+.edge-cta .edge-label{ color:var(--accent-ink); }
+.edge-cta h2{ font-size:clamp(46px, 7.5vw, 104px); margin:14px 0 18px; max-width:12ch; }
+.edge-cta p{ max-width:56ch; margin:0 0 26px; font-size:16px; color:var(--accent-ink); }
+.edge-cta-btn{
+  display:inline-block; background:var(--accent-ink); color:var(--accent-hi); padding:14px 26px;
+  font-family:var(--display); font-size:22px; text-transform:uppercase; letter-spacing:1px; transition:transform .2s, box-shadow .2s;
+}
+.edge-cta-btn:hover{ opacity:1; transform:translate(-3px,-3px); box-shadow:6px 6px 0 var(--accent-ink), 6px 6px 0 1px var(--accent-hi); }
+
+/* Sections slide in on scroll (only when JS is on and motion is OK) */
+.edge-js .edge-reveal{ opacity:0; transform:translateY(28px); transition:opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); }
+.edge-js .edge-reveal.is-in{ opacity:1; transform:none; }
+@media (prefers-reduced-motion: reduce){
+  .edge-ticker-track, .edge-grain, .edge-dot{ animation:none; }
+}
+
+@media (max-width: 720px){
+  .edge .edge-hero{ min-height:540px; margin-top:16px; }
+  .edge .home-hero-text{ padding:24px 20px; }
+  .edge .home-hero h1{ font-size:clamp(64px, 21vw, 110px); }
+  .edge .home-hero h1 span{ display:block; }
+  .edge .home-hero h1 span:last-child{ -webkit-text-stroke-width:1.5px; }
+  .edge .home-tag{ font-size:13px; }
+  .edge-ticker{ margin-bottom:44px; }
+  .edge-ticker-head, .edge-ticker a{ font-size:18px; }
+  .edge-box .home-now{ padding:20px; }
+  .edge-pillars{ grid-template-columns:1fr; }
+  .edge-pillar + .edge-pillar{ border-left:0; border-top:1px solid var(--line); }
+  .edge-cta{ padding:32px 22px; }
+  .edge-hero-meta span:last-child{ display:none; }
+}
