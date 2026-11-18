@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Name Game — Luc DiMarzio</title>
+  <meta name="description" content="A head-to-head name chain game. Name a big leaguer whose first name starts with the same letter as the last player's last name. 15 seconds. Three strikes." />
+  <meta name="robots" content="noindex" />
+  <meta name="theme-color" content="#0b0c10" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=Anton&family=Space+Mono:wght@400;700&display=swap" />
+  <style>
+    :root{
+      --bg:#0b0c10; --panel:#12131a; --panel2:#1a1c25; --text:#f2f3f5; --muted:#b7bac3;
+      --accent:#06b6d4; --accent-hi:#22d3ee; --accent-ink:#03191d; --accent-soft:rgba(6,182,212,.14);
+      --line:rgba(242,243,245,.14); --gold:#e5b84b; --red:#f0717a;
+      --font:"Avenir Next","Avenir","Figtree",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+      --display:"Anton","Impact","Arial Narrow Bold",sans-serif;
+      --mono:"Space Mono",ui-monospace,Menlo,monospace;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;height:100%}
+    body{
+      font-family:var(--font); color:var(--text); line-height:1.45;
+      background:radial-gradient(900px 500px at 20% -10%, rgba(6,182,212,.18), transparent 60%), var(--bg);
+      min-height:100dvh; -webkit-tap-highlight-color:transparent;
+    }
+    a{color:var(--accent-hi)}
+    .app{max-width:520px;margin:0 auto;padding:max(14px, env(safe-area-inset-top)) 16px max(18px, env(safe-area-inset-bottom));min-height:100dvh;display:flex;flex-direction:column;gap:14px}
+    .top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+    .logo{font-family:var(--display);font-size:22px;letter-spacing:.04em;text-transform:uppercase;line-height:1}
+    .logo small{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.12em;color:var(--muted);margin-top:4px}
+    .tag{font-family:var(--mono);font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:4px 10px;white-space:nowrap}
+    .tag.test{color:var(--gold);border-color:rgba(229,184,75,.4)}
+    .card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:18px}
+    h1{font-family:var(--display);font-weight:400;font-size:44px;line-height:1;margin:6px 0 8px;text-transform:uppercase;letter-spacing:.01em}
+    h2{font-size:15px;margin:0 0 10px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.08em}
+    p{margin:0 0 10px}
+    .muted{color:var(--muted)}
+    label{display:block;font-size:13px;color:var(--muted);margin:0 0 6px}
+    input,select{
+      width:100%;font:inherit;font-size:18px;color:var(--text);background:var(--panel2);
+      border:1px solid var(--line);border-radius:12px;padding:13px 14px;outline:none;
+    }
+    input:focus,select:focus{border-color:var(--accent)}
+    .btn{
+      display:block;width:100%;font:inherit;font-weight:700;font-size:17px;border:0;border-radius:12px;
+      padding:14px 16px;cursor:pointer;background:var(--accent);color:var(--accent-ink);text-align:center;
+    }
+    .btn:active{transform:translateY(1px)}
+    .btn:disabled{opacity:.45;cursor:default}
+    .btn.ghost{background:transparent;color:var(--text);border:1px solid var(--line)}
+    .btn.gold{background:var(--gold);color:#241a02}
+    .row{display:flex;gap:10px}
+    .row > *{flex:1}
+    .stack{display:flex;flex-direction:column;gap:12px}
+    .rules{margin:0;padding-left:18px;color:var(--muted);font-size:14px}
+    .rules li{margin:4px 0}
+    .code{font-family:var(--mono);font-size:44px;font-weight:700;letter-spacing:.2em;text-align:center;margin:4px 0}
+    .err{color:var(--red);font-size:14px;min-height:1em;margin:6px 0 0}
+    [hidden]{display:none !important}
+
+    /* players strip */
+    .players{display:flex;gap:8px;overflow-x:auto;padding-bottom:2px;scrollbar-width:none}
+    .pl{flex:0 0 auto;min-width:96px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:8px 10px}
+    .pl .n{font-weight:700;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:120px}
+    .pl .s{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.1em}
+    .pl .s b{color:var(--red)}
+    .pl .s i{font-style:normal;color:var(--red);opacity:.45}
+    .pending{font-size:13px;color:var(--red);text-align:center;margin:-4px 0 0}
+    .history li.pending{border-style:dashed}
+    .history li.washed{opacity:.55;border-color:var(--line)}
+    .history li.washed .what{color:var(--muted)}
+    .pl.turn{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent-soft)}
+    .pl.out{opacity:.4;text-decoration:line-through}
+    .pl.me .n::after{content:" (you)";font-weight:400;color:var(--muted)}
+
+    /* the big middle */
+    .stage{text-align:center;padding:22px 18px}
+    .ring{position:relative;width:170px;height:170px;margin:4px auto 10px}
+    .ring svg{position:absolute;inset:0;transform:rotate(-90deg)}
+    .ring .track{stroke:var(--panel2)}
+    .ring .bar{stroke:var(--accent);transition:stroke-dashoffset .25s linear, stroke .3s}
+    .ring.hurry .bar{stroke:var(--red)}
+    .ring .letter{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--display);font-size:92px;line-height:1}
+    .ring .letter.any{font-size:26px;line-height:1.05;padding:0 36px;text-align:center;font-family:var(--font);font-weight:800;letter-spacing:.02em}
+    .secs{font-family:var(--mono);font-size:13px;color:var(--muted)}
+    .who{font-size:20px;font-weight:800;margin:6px 0 2px}
+    .dir{font-family:var(--mono);font-size:12px;color:var(--gold)}
+
+    .pos-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+    .pos-grid .btn{padding:14px 4px;font-size:15px}
+    .history{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
+    .history li{display:flex;justify-content:space-between;gap:10px;font-size:15px;padding:9px 12px;background:var(--panel);border:1px solid var(--line);border-radius:12px}
+    .history li .by{color:var(--muted);font-size:13px;white-space:nowrap}
+    .history li.bad{border-color:rgba(240,113,122,.35)}
+    .history li.bad .what{color:var(--red)}
+    .history .yrs{font-family:var(--mono);font-size:11px;color:var(--muted);margin-left:6px}
+
+    /* banner */
+    .banner{
+      position:fixed;inset:0;z-index:100;display:grid;place-items:center;padding:24px;
+      background:rgba(5,6,9,.72);backdrop-filter:blur(6px);animation:fade .2s ease-out;
+    }
+    .banner .box{
+      width:100%;max-width:440px;text-align:center;border-radius:22px;padding:26px 20px;
+      background:linear-gradient(160deg, #0f2b31, var(--panel));border:1px solid var(--accent);
+      animation:pop .35s cubic-bezier(.2,1.4,.4,1);
+    }
+    .banner.bad .box{background:linear-gradient(160deg,#341419,var(--panel));border-color:var(--red)}
+    .banner.gold .box{background:linear-gradient(160deg,#352a0c,var(--panel));border-color:var(--gold)}
+    .banner .big{font-family:var(--display);font-size:54px;line-height:1.02;text-transform:uppercase;margin:0 0 10px;overflow-wrap:anywhere}
+    .banner .sub{color:var(--muted);font-size:16px;margin:0}
+    .banner .sub b{color:var(--text)}
+    .banner .hint{font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:16px;opacity:.7}
+    @keyframes pop{from{transform:scale(.7);opacity:0}to{transform:none;opacity:1}}
+    @keyframes fade{from{opacity:0}}
+    @media (prefers-reduced-motion: reduce){ .banner,.banner .box{animation:none} }
+
+    .foot{margin-top:auto;font-size:11px;color:var(--muted);text-align:center;padding-top:8px}
+    .foot a{color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="app">
+    <div class="top">
+      <a href="/play/" class="logo" style="color:inherit;text-decoration:none">Name Game<small>BASEBALL EDITION</small></a>
+      <span id="modeTag" class="tag">…</span>
+    </div>
+
+    <!-- HOME -->
+    <section id="home" class="stack" hidden>
+      <div class="card">
+        <h1>Name a big leaguer.</h1>
+        <p class="muted">Their first name has to start with the letter the last player's last name starts with. Ryne Sandberg → S to you.</p>
+        <label for="name">Your name</label>
+        <input id="name" maxlength="20" autocomplete="nickname" placeholder="e.g. Luc" />
+      </div>
+      <div class="card stack">
+        <button id="createBtn" class="btn">Start a new game</button>
+        <div class="row">
+          <input id="joinCode" maxlength="4" placeholder="CODE" autocapitalize="characters" autocomplete="off" style="text-transform:uppercase;font-family:var(--mono);letter-spacing:.2em" />
+          <button id="joinBtn" class="btn ghost">Join</button>
+        </div>
+        <button id="rejoinBtn" class="btn ghost" hidden></button>
+        <p id="homeErr" class="err"></p>
+      </div>
+      <details class="card">
+        <summary style="cursor:pointer;font-weight:700">House rules</summary>
+        <ul class="rules" style="margin-top:10px">
+          <li>Must have played in at least one MLB game. Real name or the name they went by both count — Babe Ruth = George Herman Ruth.</li>
+          <li>First and last name required. "Ichiro" won't cut it — say Ichiro Suzuki.</li>
+          <li>Suffixes don't count for the letter: Ken Griffey Jr. → G. No suffix always means the Sr.: "Ken Griffey" is the dad — type Jr. for the son.</li>
+          <li>Close spellings count (Carl Yastremski, You Darvish), but if it's close to two different players, fix it. An exact name always wins: Scott Servais and Scott Service are two players.</li>
+          <li>Shared name, like Will Smith? You get 3 extra seconds to tap the position: Pitcher or Catcher. The other Will Smith is still up for grabs. Same name and same position (the two pitchers named Pedro Martinez) counts as one player.</li>
+          <li>Double letters (Sammy Sosa) reverse the order when 3+ are playing.</li>
+          <li>Strike for a repeat, a wrong letter, a non-big-leaguer, or running out the 15-second clock. Three strikes, you're out.</li>
+          <li>A strike is only pending until the next player seals it with a right answer. Miss too, and you've got a pending strike of your own.</li>
+          <li>If it goes all the way back around to whoever missed first, nobody gets a strike — that player starts fresh with any name not yet played.</li>
+          <li>To pause, you must submit your answer first. Nobody sees it until you unpause. A pause can last 8 hours — after that the game resets.</li>
+        </ul>
+      </details>
+    </section>
+
+    <!-- LOBBY -->
+    <section id="lobby" class="stack" hidden>
+      <div class="card" style="text-align:center">
+        <h2>Game code</h2>
+        <div id="lobbyCode" class="code"></div>
+        <button id="shareBtn" class="btn ghost">Send invite link</button>
+      </div>
+      <div class="card">
+        <h2>In the dugout</h2>
+        <ul id="lobbyPlayers" class="history"></ul>
+      </div>
+      <button id="startBtn" class="btn">Play ball</button>
+      <p id="lobbyWait" class="muted" style="text-align:center"></p>
+      <button id="lobbyLeave" class="btn ghost">Leave</button>
+    </section>
+
+    <!-- GAME -->
+    <section id="game" class="stack" hidden>
+      <div id="players" class="players"></div>
+      <div class="card stage">
+        <div id="ring" class="ring">
+          <svg viewBox="0 0 170 170"><circle class="track" cx="85" cy="85" r="76" fill="none" stroke-width="10"/><circle id="bar" class="bar" cx="85" cy="85" r="76" fill="none" stroke-width="10" stroke-linecap="round" stroke-dasharray="477.5" stroke-dashoffset="0"/></svg>
+          <div id="letter" class="letter"></div>
+        </div>
+        <div id="secs" class="secs"></div>
+        <div id="who" class="who"></div>
+        <div id="dir" class="dir"></div>
+      </div>
+      <p id="pendingLine" class="pending" hidden></p>
+
+      <form id="playForm" class="stack" hidden autocomplete="off">
+        <input id="playInput" placeholder="First and last name" autocomplete="off" autocorrect="off" autocapitalize="words" spellcheck="false" enterkeyhint="go" />
+        <div class="row">
+          <button type="submit" class="btn">Submit</button>
+          <button type="button" id="pauseBtn" class="btn ghost">Submit &amp; pause</button>
+        </div>
+      </form>
+
+      <p id="posHint" class="muted" style="text-align:center;margin:0;font-size:14px" hidden></p>
+      <div id="posPick" class="pos-grid" hidden></div>
+
+      <div id="pausedBox" class="card" style="text-align:center" hidden>
+        <div class="big" style="font-family:var(--display);font-size:30px;text-transform:uppercase">Paused</div>
+        <p id="pausedText" class="muted"></p>
+        <button id="unpauseBtn" class="btn gold" hidden>Unpause &amp; reveal my answer</button>
+      </div>
+
+      <div id="overBox" class="card" style="text-align:center" hidden>
+        <div id="overText" style="font-family:var(--display);font-size:36px;text-transform:uppercase;line-height:1.05"></div>
+        <div class="row" style="margin-top:14px">
+          <button id="rematchBtn" class="btn">Rematch</button>
+          <a href="/play/" class="btn ghost" style="text-decoration:none">New game</a>
+        </div>
+      </div>
+
+      <p id="gameErr" class="err"></p>
+      <h2 style="margin-top:4px">Lineup so far</h2>
+      <ul id="history" class="history"></ul>
+      <button id="leaveBtn" class="btn ghost" style="margin-top:8px">Leave game</button>
+    </section>
+
+    <section id="loading" class="card" style="text-align:center"><p class="muted">Warming up…</p></section>
+
+    <p class="foot">Player list from the <a href="https://github.com/chadwickbureau/register" target="_blank" rel="noopener">Chadwick Baseball Bureau</a> register (ODC-By), positions from MLB, linked to <a href="https://www.baseball-reference.com/" target="_blank" rel="noopener">Baseball-Reference</a>. · <a href="/">lucdimarzio.com</a></p>
+  </div>
+
+  <div id="banner" class="banner" hidden><div class="box"><div id="bannerBig" class="big"></div><p id="bannerSub" class="sub"></p><div class="hint">tap to close</div></div></div>
+
+  <script type="module" src="/play/js/app.js"></script>
+</body>
+</html>
