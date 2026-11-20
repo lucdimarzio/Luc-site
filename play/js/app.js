@@ -386,10 +386,12 @@ function showBanner(b) {
       big = toMe ? 'You lead off' : `${esc(b.nextName)} leads off`;
       sub = 'Any letter. 15 seconds. Play ball.'; break;
     case 'ok': {
-      big = b.double ? `Double ${b.letter}! ${b.letter} to ${next}` : `${b.letter} to ${next}`;
+      big = b.again ? (toMe ? `Double ${b.letter}! Go again` : `Double ${b.letter}! ${esc(b.nextName)} goes again`)
+        : b.double ? `Double ${b.letter}! ${b.letter} to ${next}` : `${b.letter} to ${next}`;
       sub = `<b>${esc(b.byName)}</b> ${b.unpaused ? 'unpaused — the sealed answer was' : 'played'} <b>${esc(b.text)}</b>${b.pos ? ` (${esc(G.posName(b.pos))})` : ''}.`;
       if (b.typed) sub += ` <span style="opacity:.75">(typed “${esc(b.typed)}” — close enough)</span>`;
       if (b.reversed) sub += ' Order reverses!';
+      if (b.again) sub += ` Keep going until a name isn't a double.`;
       sub += sealedLine(b.sealed);
       tone = b.double ? 'gold' : ''; break;
     }

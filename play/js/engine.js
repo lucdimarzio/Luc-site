@@ -187,10 +187,12 @@ function accept(s, r, now, pos) {
   const sealed = seal(s);
   const reversed = double && active(s).length > 2;
   if (reversed) s.dir = -s.dir;
-  advance(s, now);
+  // Two players left: a double letter keeps the turn until you play your way out of it.
+  const again = double && active(s).length === 2;
+  if (again) { s.ask = null; s.turnStartedAt = now; } else advance(s, now);
   s.banner = {
     id: rid(), kind: 'ok', byUid: p.uid, byName: p.name, text: r.display, playerId: r.id, from: r.from, to: r.to,
-    pos: pos || '', typed: r.fuzzy ? r.typed : '', letter: lastL, double, reversed, sealed,
+    pos: pos || '', typed: r.fuzzy ? r.typed : '', letter: lastL, double, reversed, again, sealed,
     nextUid: current(s).uid, nextName: current(s).name,
   };
   finishIfWon(s);
