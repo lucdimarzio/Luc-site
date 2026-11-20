@@ -100,7 +100,7 @@ function enterSolo() {
 $('soloLevels').onclick = async e => {
   const b = e.target.closest('[data-level]');
   if (!b) return;
-  const name = myName(); if (!name) return;
+  const name = myName('soloErr'); if (!name) return;
   const now = Date.now();
   let s = G.newGame({ code: 'SOLO', category: CATEGORY, host: { uid: 'me', name } }, now);
   s = G.join(G.fill(s), { uid: 'cpu', name: 'Computer' });
@@ -109,7 +109,7 @@ $('soloLevels').onclick = async e => {
   await solo.create('SOLO', s);
   enterSolo();
 };
-$('soloResume').onclick = () => { if (myName()) enterSolo(); };
+$('soloResume').onclick = () => { if (myName('soloErr')) enterSolo(); };
 
 // The computer's turn: think for a few seconds, then answer (or come up empty).
 let botTimer = null, botKey = '';
@@ -131,9 +131,15 @@ function driveBot() {
   }, wait);
 }
 
-const myName = () => {
+const myName = (err = 'homeErr') => {
   const n = $('name').value.trim().replace(/\s+/g, ' ');
-  if (!n) { $('homeErr').textContent = 'Put your name in first.'; $('name').focus(); return ''; }
+  $('homeErr').textContent = $('soloErr').textContent = '';
+  if (!n) {
+    $(err).textContent = 'Put your name in first (top of the page).';
+    $('name').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    $('name').focus({ preventScroll: true });
+    return '';
+  }
   localStorage.setItem(NAME_KEY(), n);
   return n;
 };
