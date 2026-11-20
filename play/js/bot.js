@@ -4,10 +4,10 @@ import { POSITIONS } from './engine.js';
 import { normalize } from './names.js';
 
 export const LEVELS = {
-  // knows: long careers that started since 1955 / long careers that reached 1930 / anyone with 5+ seasons
-  easy:   { label: 'Easy',   minYears: 14, debutBy: 1955, miss: 0.14, think: [4000, 9000] },
-  medium: { label: 'Medium', minYears: 10, lastBy: 1930,  miss: 0.06, think: [3000, 7500] },
-  hard:   { label: 'Hard',   minYears: 5,                 miss: 0.015, think: [2000, 5500] },
+  // Who it "knows", by career WAR (Baseball-Reference) and whether they played since 1950/1955/1920.
+  easy:   { label: 'Easy',   minWar: 25, since: 1950, miss: 0.14, think: [4000, 9000] },
+  medium: { label: 'Medium', minWar: 10, since: 1955, miss: 0.06, think: [3000, 7500] },
+  hard:   { label: 'Hard',   minWar: 4,  since: 1920, miss: 0.015, think: [2000, 5500] },
 };
 
 // Stars every level knows, whatever their career length.
@@ -40,7 +40,6 @@ Yasiel Puig; Ivan Nova; Ian Kinsler; Evan Longoria; Eric Hosmer; Nelson Cruz; Vi
 Quilvio Veras; Yogi Berra; Zoilo Versalles; Xavier Nady; Ugueth Urbina; Oscar Gamble; Noah Syndergaard`
   .split(';').map(s => s.trim()).filter(Boolean);
 
-const yrs = p => (p[6] || 0) - (p[5] || 0) + 1;
 const nameOf = p => `${p[0]} ${p[1]}${p[3] ? ' ' + p[3] : ''}`;
 
 export function makeBot(players, resolve, level) {
@@ -55,7 +54,7 @@ export function makeBot(players, resolve, level) {
   };
   STARS.forEach(add);
   for (const p of players) {
-    if (yrs(p) < L.minYears || (L.debutBy && p[5] < L.debutBy) || (L.lastBy && p[6] < L.lastBy)) continue;
+    if ((p[9] || 0) < L.minWar || (L.since && p[6] < L.since)) continue;
     add(nameOf(p));
   }
   const lists = new Map([...byLetter].map(([k, v]) => [k, [...v]]));

@@ -58,7 +58,11 @@
     .btn.gold{background:var(--gold);color:#241a02}
     .row{display:flex;gap:10px}
     .row > *{flex:1}
-    #soloLevels .btn{min-width:0;padding-left:4px;padding-right:4px}
+    select{width:100%;font:inherit;font-size:16px;padding:10px 12px;border-radius:12px;background:var(--bg);color:var(--text);border:1px solid var(--line)}
+    .board{margin:12px 0 0;padding-left:26px;display:grid;gap:8px}
+    .board li b{font-family:var(--mono)}
+    .board .by{display:block;font-size:12px;color:var(--muted)}
+    #soloLevels .btn{min-width:0;padding-left:4px;padding-right:4px;font-size:15px}
     .stack{display:flex;flex-direction:column;gap:12px}
     .rules{margin:0;padding-left:18px;color:var(--muted);font-size:14px}
     .rules li{margin:4px 0}
@@ -163,6 +167,11 @@
         <button id="soloResume" class="btn ghost" hidden></button>
         <p id="soloErr" class="err"></p>
       </div>
+      <details id="lbBox" class="card">
+        <summary style="cursor:pointer;font-weight:700">Longest games</summary>
+        <select id="lbBoard" aria-label="Which leaderboard" style="margin-top:10px"></select>
+        <ol id="lbList" class="board"></ol>
+      </details>
       <details class="card">
         <summary style="cursor:pointer;font-weight:700">House rules</summary>
         <ul class="rules" style="margin-top:10px">
@@ -229,6 +238,7 @@
 
       <div id="overBox" class="card" style="text-align:center" hidden>
         <div id="overText" style="font-family:var(--display);font-size:36px;text-transform:uppercase;line-height:1.05"></div>
+        <p id="overRecord" class="muted" style="margin:8px 0 0"></p>
         <div class="row" style="margin-top:14px">
           <button id="rematchBtn" class="btn">Rematch</button>
           <a href="/play/" class="btn ghost" style="text-decoration:none">New game</a>
@@ -243,7 +253,7 @@
 
     <section id="loading" class="card" style="text-align:center"><p class="muted">Warming up…</p></section>
 
-    <p class="foot">Player list from the <a href="https://github.com/chadwickbureau/register" target="_blank" rel="noopener">Chadwick Baseball Bureau</a> register (ODC-By), positions from MLB, linked to <a href="https://www.baseball-reference.com/" target="_blank" rel="noopener">Baseball-Reference</a>. · <a href="/">lucdimarzio.com</a></p>
+    <p class="foot">Player list from the <a href="https://github.com/chadwickbureau/register" target="_blank" rel="noopener">Chadwick Baseball Bureau</a> register (ODC-By), positions from MLB, WAR from and links to <a href="https://www.baseball-reference.com/" target="_blank" rel="noopener">Baseball-Reference</a>. · <a href="/">lucdimarzio.com</a></p>
   </div>
 
   <div id="banner" class="banner" hidden><div class="box"><div id="bannerBig" class="big"></div><p id="bannerSub" class="sub"></p><div class="hint">tap to close</div></div></div>

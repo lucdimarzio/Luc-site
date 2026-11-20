@@ -6,6 +6,7 @@ with each player's primary position from MLB's public stats API.
 2. python3 _tools/build_baseball_players.py <that folder> play/data/baseball.json
 
 Positions are cached in _tools/positions-cache.json, so a rebuild only asks MLB about new players.
+Career WAR comes from _tools/war-cache.json (refresh it with update_war.py).
 Run it once a season to pick up new debuts. Data license: ODC-By 1.0 (credit Chadwick Baseball Bureau).
 """
 import csv, json, sys, glob, os, time, urllib.request
@@ -44,13 +45,16 @@ for i in range(0, len(todo), 100):
     print(f'positions {min(i + 100, len(todo))}/{len(todo)}', file=sys.stderr)
     time.sleep(0.25)
 
+WAR = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'war-cache.json')
+war = json.load(open(WAR)) if os.path.exists(WAR) else {}
 players = []
 for r in rows:
     pos = cache.get(r['mlbam'], '')
     pos = GROUP.get(pos, pos)
-    players.append([r['first'], r['last'], r['given'], SUFFIX_FIX.get(r['bbref'], r['suffix']), r['bbref'], r['frm'], r['to'], pos, r['nick']])
+    players.append([r['first'], r['last'], r['given'], SUFFIX_FIX.get(r['bbref'], r['suffix']), r['bbref'], r['frm'], r['to'], pos, r['nick'],
+                    round(war.get(r['bbref'], 0))])
 players.sort(key=lambda x: (x[1], x[0], x[5]))
-json.dump({'source': 'Chadwick Baseball Bureau Register (ODC-By 1.0); positions from MLB Stats API',
-           'fields': ['first', 'last', 'given', 'suffix', 'id', 'from', 'to', 'pos', 'nicknames'], 'players': players},
+json.dump({'source': 'Chadwick Baseball Bureau Register (ODC-By 1.0); positions from MLB Stats API; WAR from Baseball-Reference',
+           'fields': ['first', 'last', 'given', 'suffix', 'id', 'from', 'to', 'pos', 'nicknames', 'war'], 'players': players},
           open(out, 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
 print(len(players))

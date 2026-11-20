@@ -15,6 +15,16 @@
           }
         }
       }
+    },
+    "records": {
+      ".read": "auth != null",
+      "$board": {
+        ".indexOn": "n",
+        "$id": {
+          ".write": "auth != null && $board.matches(/^(p[2-5]|cpu-(easy|medium|hard))$/) && $id.matches(/^[A-Za-z0-9-]{1,60}$/)",
+          ".validate": "newData.hasChildren(['n', 'names', 'at']) && newData.child('n').isNumber() && newData.child('n').val() >= 1 && newData.child('n').val() <= 5000 && newData.child('names').isString() && newData.child('names').val().length <= 200 && newData.child('at').isNumber()"
+        }
+      }
     }
   }
 }

@@ -1,6 +1,7 @@
 // Online mode: Firebase Realtime Database + anonymous sign-in (no accounts for players).
 //   /games/<CODE>                  the shared game every phone watches
 //   /sealed/<CODE>/<uid>/<pauseId> a paused play; only the person who wrote it can read it
+//   /records/<board>/<id>          the longest games (leaderboard)
 
 const V = '10.12.2';
 const SDK = name => `https://www.gstatic.com/firebasejs/${V}/firebase-${name}.js`;
@@ -44,5 +45,12 @@ export async function createBackend(config) {
     },
     async seal(code, pid, data) { await db.set(db.ref(d, `sealed/${code}/${user.uid}/${pid}`), data); },
     async unseal(code, pid) { return (await db.get(db.ref(d, `sealed/${code}/${user.uid}/${pid}`))).val(); },
+    async saveRecord(board, id, entry) { await db.set(db.ref(d, `records/${board}/${id}`), entry); },
+    async topRecords(board, limit) {
+      const snap = await db.get(db.query(db.ref(d, `records/${board}`), db.orderByChild('n'), db.limitToLast(limit)));
+      const out = [];
+      snap.forEach(c => { out.push({ id: c.key, ...c.val() }); });
+      return out.sort((a, b) => b.n - a.n || a.at - b.at);
+    },
   };
 }

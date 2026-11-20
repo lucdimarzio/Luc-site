@@ -74,7 +74,7 @@ export function start(s, uid, now) {
   if (s.players.length < 2) throw new Error('Need at least 2 players.');
   s.players.forEach(p => { p.strikes = 0; p.out = false; });
   Object.assign(s, {
-    status: 'playing', gameNo: (s.gameNo || 0) + 1, turn: Math.floor(Math.random() * s.players.length),
+    status: 'playing', gameNo: (s.gameNo || 0) + 1, turn: Math.floor(Math.random() * s.players.length), size: s.players.length,
     dir: 1, letter: '', used: {}, plays: [], pending: [], pause: null, winnerUid: '', turnStartedAt: now,
   });
   s.banner = { id: rid(), kind: 'start', nextUid: current(s).uid, nextName: current(s).name };

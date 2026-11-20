@@ -32,12 +32,19 @@ in `build_baseball_players.py` (Alomar, Cruz, Guerrero, Tatís, DeShields, Lomba
 ## Playing the computer
 "Play the computer" on the home screen runs a 1-on-1 game on the phone itself (no server; `backend-solo.js`
 keeps it in localStorage so you can come back to it). `bot.js` is the opponent:
-- **Easy** knows the stars list in `bot.js` plus players with 14+ seasons who debuted in 1955 or later,
-  thinks 4–9 seconds, comes up empty ~14% of the time.
-- **Medium** knows 10+ season careers that reached 1930, thinks 3–7.5 s, misses ~6%.
-- **Hard** knows anyone with 5+ seasons, thinks 2–5.5 s, misses ~2% (mostly on hard letters).
+- Who it "knows" comes from career WAR (Baseball-Reference), plus the `STARS` list in `bot.js`:
+  **Easy** 25+ WAR and active since 1950 (~850 players), thinks 4–9 s, comes up empty ~14% of the time;
+  **Medium** 10+ WAR since 1955 (~2,100), 3–7.5 s, ~6%; **Hard** 4+ WAR since 1920 (~4,850), 2–5.5 s, ~2%.
+- WAR is the last field in `baseball.json`. Refresh it with `python3 _tools/update_war.py` (saves totals in
+  `war-cache.json`, which `build_baseball_players.py` also uses).
 It plays by every rule (shared-name positions, Jr./Sr., doubles). Edit `LEVELS` or `STARS` to tune it.
 Leaving the page doesn't stop the clock; pause first if you're stepping away.
+
+## Longest games (leaderboard)
+When a game ends, every phone in it saves the number of correct names to `/records/<board>/<game>` in Firebase
+(boards: `p2`, `p3`, `p4`, `p5` = 5+ players, and `cpu-easy` / `cpu-medium` / `cpu-hard`). The home screen's
+"Longest games" shows the top 10 of each; the game-over card says if you made it. Needs the `records` part of
+`firebase-database-rules.json` in the Firebase console. Anyone could post a fake score; fine for friends.
 
 ## Test mode
 Until `firebase-config.js` has an apiKey, the game runs with no server: open the page in two

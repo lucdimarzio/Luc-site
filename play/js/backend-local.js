@@ -41,6 +41,16 @@ export async function createBackend() {
       if (localStorage.getItem(k)) throw new Error('Already sealed.');
       localStorage.setItem(k, JSON.stringify(data));
     },
+    async saveRecord(board, id, entry) {
+      const all = JSON.parse(localStorage.getItem('namegame:records') || '{}');
+      (all[board] = all[board] || {})[id] = entry;
+      localStorage.setItem('namegame:records', JSON.stringify(all));
+    },
+    async topRecords(board, limit) {
+      const all = JSON.parse(localStorage.getItem('namegame:records') || '{}');
+      return Object.entries(all[board] || {}).map(([id, e]) => ({ id, ...e }))
+        .sort((a, b) => b.n - a.n || a.at - b.at).slice(0, limit);
+    },
     async unseal(code, pid) {
       try { return JSON.parse(localStorage.getItem(`namegame:sealed:${code}:${uid}:${pid}`)); } catch { return null; }
     },

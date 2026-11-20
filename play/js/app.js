@@ -94,7 +94,7 @@ function enterSolo() {
   api = solo; code = 'SOLO'; lastBannerId = null; botKey = '';
   const saved = solo.saved();
   bot = makeBot(players, resolve, saved.cpuLevel);
-  history.replaceState(null, '', '/play/');
+  history.replaceState(null, '', `/play/${params.has('local') ? '?local' : ''}`);
   unwatch = api.watch(code, s => { state = s && G.fill(s); render(); });
 }
 $('soloLevels').onclick = async e => {
@@ -110,6 +110,48 @@ $('soloLevels').onclick = async e => {
   enterSolo();
 };
 $('soloResume').onclick = () => { if (myName('soloErr')) enterSolo(); };
+
+// ---------- longest games (leaderboard) ----------
+const BOARDS = [['p2', '2 players'], ['p3', '3 players'], ['p4', '4 players'], ['p5', '5+ players'],
+  ['cpu-easy', 'vs the computer · Easy'], ['cpu-medium', 'vs the computer · Medium'], ['cpu-hard', 'vs the computer · Hard']];
+// "#1 on the 2-player leaderboard" / "#1 on the Easy computer leaderboard"
+const boardName = b => b.startsWith('cpu-') ? `${b[4].toUpperCase()}${b.slice(5)} computer` : `${b[1]}${b === 'p5' ? '+' : ''}-player`;
+const boardOf = s => s.cpuLevel ? `cpu-${s.cpuLevel}` : `p${Math.min(5, Math.max(2, s.size || s.players.length))}`;
+const goodPlays = s => s.plays.filter(p => p.ok).length;
+const recorded = new Set();
+
+function recordGame() {
+  const s = state, n = goodPlays(s);
+  const id = s.cpuLevel ? `cpu-${net.uid.slice(0, 28)}-${(s.plays[0] || {}).t || 0}` : `${s.code}-${s.gameNo}`;
+  if (recorded.has(id)) return;
+  recorded.add(id);
+  $('overRecord').textContent = `${n} name${n === 1 ? '' : 's'} played.`;
+  if (n < 1) return;
+  const board = boardOf(s);
+  // every phone in the game writes the same entry, so it doesn't matter who's still around
+  const entry = { n, names: s.players.filter(p => p.uid !== 'cpu').map(p => p.name).join(' · ').slice(0, 200),
+    at: (s.plays[s.plays.length - 1] || {}).t || api.now() };
+  net.saveRecord(board, id, entry)
+    .then(() => net.topRecords(board, 10))
+    .then(top => {
+      const rank = top.findIndex(e => e.id === id);
+      if (rank >= 0) $('overRecord').innerHTML = `${n} names played — <b style="color:var(--gold)">#${rank + 1}</b> on the ${esc(boardName(board))} leaderboard!`;
+    })
+    .catch(() => { /* leaderboard not set up; the game still counts */ });
+}
+
+$('lbBoard').innerHTML = BOARDS.map(([k, label]) => `<option value="${k}">${label}</option>`).join('');
+async function loadBoard() {
+  const list = $('lbList');
+  list.innerHTML = '<li class="muted">Loading…</li>';
+  try {
+    const top = await net.topRecords($('lbBoard').value, 10);
+    list.innerHTML = top.length ? top.map(e => `<li><b>${e.n}</b> names — ${esc(e.names)}<span class="by">${new Date(e.at).toLocaleDateString()}</span></li>`).join('')
+      : '<li class="muted">No games yet. Go set the mark.</li>';
+  } catch { list.innerHTML = '<li class="muted">The leaderboard isn\'t set up yet.</li>'; }
+}
+$('lbBox').addEventListener('toggle', () => { if ($('lbBox').open) loadBoard(); });
+$('lbBoard').onchange = loadBoard;
 
 // The computer's turn: think for a few seconds, then answer (or come up empty).
 let botTimer = null, botKey = '';
@@ -365,6 +407,7 @@ function render() {
     $('secs').textContent = 'clock stopped';
   }
   if (state.status === 'over') {
+    recordGame();
     const w = state.players.find(p => p.uid === state.winnerUid);
     $('overText').textContent = w ? (w.uid === api.uid ? 'You win!' : `${w.name} wins`) : 'Game over';
     $('secs').textContent = '';
