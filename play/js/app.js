@@ -150,7 +150,18 @@ async function loadBoard() {
       : '<li class="muted">No games yet. Go set the mark.</li>';
   } catch { list.innerHTML = '<li class="muted">The leaderboard isn\'t set up yet.</li>'; }
 }
-$('lbBox').addEventListener('toggle', () => { if ($('lbBox').open) loadBoard(); });
+// Rules and leaderboard open as sheets over the page
+const openSheet = id => { const d = $(id); if (!d.open) d.showModal(); };
+$('rulesBtn').onclick = () => openSheet('rulesSheet');
+$('rulesLink').onclick = e => { e.preventDefault(); openSheet('rulesSheet'); };
+$('lbBtn').onclick = () => { openSheet('lbSheet'); loadBoard(); };
+for (const d of document.querySelectorAll('dialog.sheet')) {
+  d.addEventListener('click', e => {
+    const r = d.getBoundingClientRect();
+    const outside = e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom;
+    if ((e.target === d && outside) || e.target.closest('[data-close]')) d.close();
+  });
+}
 $('lbBoard').onchange = loadBoard;
 
 // The computer's turn: think for a few seconds, then answer (or come up empty).
