@@ -55,7 +55,7 @@ async function boot() {
   const [backend, data] = await Promise.all([
     online ? import('./backend-firebase.js').then(m => m.createBackend(firebaseConfig))
            : import('./backend-local.js').then(m => m.createBackend()),
-    fetch(`/play/data/${CATEGORY}.json`).then(r => r.json()),
+    fetch(`/play/data/${CATEGORY}.json${new URL(import.meta.url).search}`).then(r => r.json()),
   ]);
   api = net = backend;
   solo = createSolo();
