@@ -29,6 +29,16 @@ When a name has a Jr., anyone with that name and no suffix counts as the Sr.
 A few famous father/son pairs are missing Jr./Sr. in the register; they're filled in by `SUFFIX_FIX`
 in `build_baseball_players.py` (Alomar, Cruz, Guerrero, Tatís, DeShields, Lombard) — add more there.
 
+## Playing the computer
+"Play the computer" on the home screen runs a 1-on-1 game on the phone itself (no server; `backend-solo.js`
+keeps it in localStorage so you can come back to it). `bot.js` is the opponent:
+- **Easy** knows the stars list in `bot.js` plus players with 14+ seasons who debuted in 1955 or later,
+  thinks 4–9 seconds, comes up empty ~14% of the time.
+- **Medium** knows 10+ season careers that reached 1930, thinks 3–7.5 s, misses ~6%.
+- **Hard** knows anyone with 5+ seasons, thinks 2–5.5 s, misses ~2% (mostly on hard letters).
+It plays by every rule (shared-name positions, Jr./Sr., doubles). Edit `LEVELS` or `STARS` to tune it.
+Leaving the page doesn't stop the clock; pause first if you're stepping away.
+
 ## Test mode
 Until `firebase-config.js` has an apiKey, the game runs with no server: open the page in two
 browser tabs, and each tab is a different player. Add `?local` to the URL to force test mode later.

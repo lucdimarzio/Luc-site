@@ -1,13 +1,15 @@
 import * as G from './engine.js';
 import { buildIndex, lookup, normalize } from './names.js';
 import { firebaseConfig } from './firebase-config.js';
+import { createBackend as createSolo } from './backend-solo.js';
+import { makeBot, LEVELS } from './bot.js';
 
 const $ = id => document.getElementById(id);
 const CATEGORY = 'baseball';
 const params = new URLSearchParams(location.search);
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
-let api, players, index;
+let api, net, solo, bot, players, index;
 // in test mode every tab is its own player, so each tab keeps its own name
 const NAME_KEY = () => api.mode === 'local' ? `namegame:name:${api.uid}` : 'namegame:name';
 let code = '', state = null, unwatch = null, lastBannerId = null, busy = false;
@@ -55,7 +57,8 @@ async function boot() {
            : import('./backend-local.js').then(m => m.createBackend()),
     fetch(`/play/data/${CATEGORY}.json`).then(r => r.json()),
   ]);
-  api = backend;
+  api = net = backend;
+  solo = createSolo();
   players = data.players;
   index = buildIndex(players);
   $('modeTag').textContent = api.mode === 'online' ? 'Online' : 'Test mode · 1 tab = 1 player';
@@ -79,6 +82,53 @@ function showHome() {
   const last = localStorage.getItem('namegame:last');
   $('rejoinBtn').hidden = !last;
   if (last) $('rejoinBtn').textContent = `Back to game ${last}`;
+  const s = solo.saved();
+  $('soloResume').hidden = !(s && s.status !== 'over');
+  if (s) $('soloResume').textContent = `Back to your game vs the computer (${(LEVELS[s.cpuLevel] || LEVELS.medium).label})`;
+}
+
+// ---------- vs the computer ----------
+function useNet() { if (api !== net) { if (unwatch) unwatch(); unwatch = null; state = null; api = net; } }
+function enterSolo() {
+  if (unwatch) unwatch();
+  api = solo; code = 'SOLO'; lastBannerId = null; botKey = '';
+  const saved = solo.saved();
+  bot = makeBot(players, resolve, saved.cpuLevel);
+  history.replaceState(null, '', '/play/');
+  unwatch = api.watch(code, s => { state = s && G.fill(s); render(); });
+}
+$('soloLevels').onclick = async e => {
+  const b = e.target.closest('[data-level]');
+  if (!b) return;
+  const name = myName(); if (!name) return;
+  const now = Date.now();
+  let s = G.newGame({ code: 'SOLO', category: CATEGORY, host: { uid: 'me', name } }, now);
+  s = G.join(G.fill(s), { uid: 'cpu', name: 'Computer' });
+  s.cpuLevel = b.dataset.level;
+  s = G.start(s, 'me', now);
+  await solo.create('SOLO', s);
+  enterSolo();
+};
+$('soloResume').onclick = () => { if (myName()) enterSolo(); };
+
+// The computer's turn: think for a few seconds, then answer (or come up empty).
+let botTimer = null, botKey = '';
+function driveBot() {
+  if (api !== solo || !state || state.status !== 'playing' || current().uid !== 'cpu') return;
+  const key = `${state.gameNo}:${state.plays.length}`;
+  if (botTimer || key === botKey) return;
+  // coming back to a game where it was already the computer's turn: answer quickly
+  const wait = Math.min(bot.thinkMs(), Math.max(1200, state.turnStartedAt + G.TURN_MS - 2500 - api.now()));
+  botTimer = setTimeout(async () => {
+    botTimer = null;
+    if (api !== solo || !state || state.status !== 'playing' || current().uid !== 'cpu') return;
+    if (`${state.gameNo}:${state.plays.length}` !== key) return;
+    botKey = key;
+    const pick = bot.choose(state);
+    await act(s => pick ? G.play(s, 'cpu', pick.text, resolve, api.now(), { pos: pick.pos || '' })
+                        : G.giveUp(s, 'cpu', api.now()));
+    if (`${state.gameNo}:${state.plays.length}` === key) botKey = '';   // didn't go through; try again
+  }, wait);
 }
 
 const myName = () => {
@@ -89,6 +139,7 @@ const myName = () => {
 };
 
 $('createBtn').onclick = async () => {
+  useNet();
   const name = myName(); if (!name) return;
   const alphabet = 'ABCDEFGHJKMNPQRSTUVWXYZ';
   let c;
@@ -97,9 +148,9 @@ $('createBtn').onclick = async () => {
   await api.create(c, G.newGame({ code: c, category: CATEGORY, host: { uid: api.uid, name } }, api.now()));
   enter(c, false);
 };
-$('joinBtn').onclick = () => { if (myName()) enter($('joinCode').value.trim().toUpperCase(), true); };
+$('joinBtn').onclick = () => { useNet(); if (myName()) enter($('joinCode').value.trim().toUpperCase(), true); };
 $('joinCode').addEventListener('keydown', e => { if (e.key === 'Enter') $('joinBtn').click(); });
-$('rejoinBtn').onclick = () => { if (myName()) enter(localStorage.getItem('namegame:last'), true); };
+$('rejoinBtn').onclick = () => { useNet(); if (myName()) enter(localStorage.getItem('namegame:last'), true); };
 
 async function enter(c, joining) {
   $('homeErr').textContent = '';
@@ -144,7 +195,8 @@ const leave = () => {
   if (!confirm('Leave this game? If it has started, you\'re out.')) return;
   act(s => G.leave(s, api.uid, api.now())).then(() => {
     if (unwatch) unwatch(); unwatch = null; state = null;
-    localStorage.removeItem('namegame:last');
+    if (api === solo) { solo.clear(); api = net; }
+    else localStorage.removeItem('namegame:last');
     history.replaceState(null, '', '/play/'); showHome();
   });
 };
@@ -322,6 +374,7 @@ function render() {
 
   renderHistory();
   showBanner(state.banner);
+  driveBot();
 }
 
 function pausedLine() {
@@ -342,6 +395,7 @@ const REASONS = {
   letter: 'starts with the wrong letter',
   time: 'ran out of time',
   oneword: 'needs a first and last name',
+  stumped: 'came up empty',
 };
 
 const verified = new Map();

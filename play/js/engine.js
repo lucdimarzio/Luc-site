@@ -164,6 +164,12 @@ export function play(s, uid, text, resolve, now, { fromPause = false, pos = '' }
   return accept(s, r, now, pos);
 }
 
+// The computer couldn't think of one: same as a miss.
+export function giveUp(s, uid, now) {
+  if (s.status !== 'playing' || current(s).uid !== uid) throw new Error("It's not your turn.");
+  return strike(s, 'stumped', '', now);
+}
+
 export function answerPosition(s, uid, pos, resolve, now) {
   if (s.status !== 'playing' || !s.ask) throw new Error('Nothing to answer.');
   if (s.ask.uid !== uid) throw new Error("It's not your turn.");

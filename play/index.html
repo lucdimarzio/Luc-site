@@ -58,6 +58,7 @@
     .btn.gold{background:var(--gold);color:#241a02}
     .row{display:flex;gap:10px}
     .row > *{flex:1}
+    #soloLevels .btn{min-width:0;padding-left:4px;padding-right:4px}
     .stack{display:flex;flex-direction:column;gap:12px}
     .rules{margin:0;padding-left:18px;color:var(--muted);font-size:14px}
     .rules li{margin:4px 0}
@@ -150,6 +151,16 @@
         </div>
         <button id="rejoinBtn" class="btn ghost" hidden></button>
         <p id="homeErr" class="err"></p>
+      </div>
+      <div class="card stack">
+        <h2 style="margin:0">Play the computer</h2>
+        <p class="muted" style="margin:0">No one around? Go one-on-one. Easy knows the big stars, Hard knows just about everybody.</p>
+        <div id="soloLevels" class="row">
+          <button class="btn ghost" data-level="easy">Easy</button>
+          <button class="btn ghost" data-level="medium">Medium</button>
+          <button class="btn ghost" data-level="hard">Hard</button>
+        </div>
+        <button id="soloResume" class="btn ghost" hidden></button>
       </div>
       <details class="card">
         <summary style="cursor:pointer;font-weight:700">House rules</summary>
